@@ -1,0 +1,5 @@
+Responsive Design heißt, das Design reagiert auf verschiedene Bildschirmgrößen. So werden Elemente anders/ nicht angezeigt, wenn man z. B. eine Website am Handy anstatt am Desktop PC öffnet.
+
+Bootstrap erspart dem Entwickler viel CSS-Stress. Denn man kann auf vordefinierte Klassen zurückgreifen, die aufeinander abgestimmt sind und fertig "designed" sind. Man muss bei einem Button also nur die Art angeben - nicht Farbe, Border-Radius uvm.
+
+Ein Responsive Design lässt sich dort über die device größen xs, sm, md, lg umsetzen. So kann man die Anordnung (und Anzeige) der Elemente je nach Bildschirmgröße anpassen.

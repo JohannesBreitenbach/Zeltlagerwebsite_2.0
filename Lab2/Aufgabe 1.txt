@@ -1,0 +1,7 @@
+Ein Selector wird genutzt, um Elemente des HTML files anzusprechen. Dabei kann ein tag angesprochen werden (z. B. h1), eine Klasse, die HTML elementen zugewiesen wurde (z. B. navElement), oder ein konkretes Element mit einer bestimmten ID.
+
+Das Boxmodell ist der Zusammenhang von Margin, Border und Padding. Beim platzieren von Elementen auf der Website muss man diese unterscheiden können.
+
+Schriftarten können mit font-family definiert werden (am besten mit einer Variable).
+
+CSS-Protoprozessoren kompilieren eine spezifische Sprache (meist CSS mit zusätzlichen Features) in ein default CSS file. Beispielsweise mit SASS erhält man Features, wie Variablen, selector cascading etc. Damit lassen sich vor allem große Projekte besser managen, wenn etwas verändert werden muss.
