@@ -10,63 +10,59 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Order ticket</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-		crossorigin="anonymous"></script>
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Ticket Service</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Dropdown
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Action</a>
-						<a class="dropdown-item" href="#">Another action</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Disabled</a>
-				</li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-			</form>
+	<!--Navbar-->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Ticket Service</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Concerts
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Concert 1</a></li>
+							<li><a class="dropdown-item" href="#">Concert 2</a></li>
+							<li><a class="dropdown-item" href="#">Concert 3</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" aria-disabled="true">About Us</a>
+					</li>
+				</ul>
+				<form class="d-flex" role="search">
+					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+			</div>
 		</div>
 	</nav>
-	<div class="container-fluid">
+	<!--Page Content-->
+	<div class="container-fluid px-4">
 		<div>
 			<div class="row">
 				<h2 class="col-lg-12">Order ticket</h2>
 				<img class="col-12 d-none d-sm-block" src="concert.png">
 			</div>
 			<form>
-				<div class="row">
+				<div class="row needs-validation" novalidate>
 					<div class="col-12 col-lg-6 form-group">
 						<label for="calendar">Date of concert:</label>
-						<select name="calendar" class="form-control">
+						<select name="calendar" class="form-select" required>
 							<option value="">Select a date</option>
 							<option>01.04.2020</option>
 							<option>02.04.2020</option>
@@ -75,6 +71,9 @@
 							<option>05.04.2020</option>
 							<option>06.04.2020</option>
 						</select>
+						<div class="invalid-feedback">
+							Please select a valid date
+						</div>
 					</div>
 					<div class="col-12 col-lg-6">
 						<label for="location">Location</label>
@@ -92,42 +91,48 @@
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row needs-validation">
 					<div class="col-12 col-lg-6">
 						<label for="firstName">First name</label>
-						<input type="text" class="form-control" id="firstName" placeholder="" value="">
+						<input type="text" class="form-control" id="firstName" placeholder="" value="" required>
 					</div>
 					<div class="col-12 col-lg-6">
 						<label for="lastName">Last name</label>
-						<input type="text" class="form-control" id="lastName" placeholder="" value="">
+						<input type="text" class="form-control" id="lastName" placeholder="" value="" required>
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row needs-validation">
 					<div class="col-12">
 						<label for="email">Email</label>
-						<input type="email" class="form-control" id="email" placeholder="youremail@example.com">
+						<input type="email" class="form-control" id="email" placeholder="youremail@example.com" required>
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row needs-validation">
 					<div class="col-12 col-lg-4">
 						<label for="country">Country</label>
-						<select id="country" class="form-control">
-							<option value="">Select your country</option>
+						<select id="country" class="form-select" required>
+							<option selected disabled value="">Select your country</option>
 							<option>Deutschland</option>
 							<option>France</option>
 							<option>Italia</option>
 							<option>United Kingdom</option>
 							<option>United States</option>
 						</select>
+						<div class="invalid-feedback">
+							Please select a valid Country
+						</div>
 					</div>
 					<div class="col-12 col-lg-4">
-						<label for="state">City</label> <input id="city" class="form-control col-4" placeholder="">
+						<label for="state">City</label> <input id="city" class="form-control col-4" placeholder="" required>
+						<div class="invalid-feedback">
+							Please provide a valid city.
+						</div>
 					</div>
 					<div class="col-12 col-lg-4">
 						<label for="zip">Zip</label> <input type="text" class="form-control col-4" id="zip"
-							placeholder="">
+							placeholder="" required>
 					</div>
 				</div>
 
@@ -145,6 +150,11 @@
 			<p>&copy; 2020 ACME Inc.</p>
 		</footer>
 	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
 </body>
 
 </html>
