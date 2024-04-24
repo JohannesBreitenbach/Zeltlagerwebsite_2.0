@@ -1,8 +1,13 @@
-import Message from "./Message"
+import Alert from "./components/Alert";
 
 function App() {
-  //add in braces any piece of code that adds
-  return <div><Message /></div>
+  return (
+    <div>
+      <Alert>
+        Hello <span>World</span>
+      </Alert>
+    </div>
+  );
 }
 
-export default App
+export default App;
