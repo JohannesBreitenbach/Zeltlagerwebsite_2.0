@@ -51,10 +51,14 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$.ajax({
-				type: "???",
-				url: "https://...",
+				type: "GET",
+				url: "https://tourism.api.opendatahub.com/v1/Weather/86725",
 				dataType : "json",
-				success: function(data) {}
+				success: function(data) {
+					$("<div/>")
+					.html(JSON.stringify(data, null, 2))
+					
+				}
 			});
 		});
 	</script>
