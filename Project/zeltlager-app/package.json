@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "popper.js": "^1.16.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -23,6 +25,8 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "sass": "^1.75.0",
+    "scss": "^0.2.4",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   }
