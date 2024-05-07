@@ -7,7 +7,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 function App() {
   return (
     <div>
-      <MyNavbar />
       <HeroSection />
     </div>
   );
