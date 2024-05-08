@@ -34,7 +34,7 @@ function HeroCarousel() {
           </div>
           <div className="carousel-item">
             <img
-              src="src/assets/img/Juno etc.jpeg"
+              src="src/assets/img/Gruppenbild_cropped.jpeg"
               className="d-block w-100"
               alt="Image 2"
             />
