@@ -34,7 +34,8 @@ router.get("/", (req, res, next) => {
             '">Detail</a></td>' +
             `<td><form action="/book/delete" method="POST">` +
             `<input type="hidden" name="isbn" value="` +
-            el["isbn"]`"><input type="submit" value="Delete"></form></td>` +
+            el["isbn"] +
+            `"><input type="submit" value="Delete"></form></td>` +
             "</tr>")
       );
       page = page.replace("{%table%}", table_html);
