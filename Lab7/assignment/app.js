@@ -41,6 +41,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/book", detailRoutes);
 app.use(listRoutes);
+app.use("/create", createRoutes);
 
 app.use((req, res, next) => {
   res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
