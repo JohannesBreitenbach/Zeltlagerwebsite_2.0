@@ -5,7 +5,7 @@ function HeroSection() {
   return (
     <>
       <HeroImageSection />
-      <HeroCarousel />
+      {/*<HeroCarousel />*/}
     </>
   );
 }

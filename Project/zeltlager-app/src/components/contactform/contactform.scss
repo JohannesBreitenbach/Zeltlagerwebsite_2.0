@@ -10,33 +10,18 @@
   .mask {
     height: 100%;
     backdrop-filter: blur(2px);
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 0, 0, 0.15);
   }
 
   .contact-form-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    //align-items: center;
+    margin-top: 30px;
   }
 
   .contact-form-card {
     width: 800px;
-  }
-
-  .mask {
-    background-color: rgba(0, 0, 0, 0.2);
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #intro {
-    background-image: url("/src/assets/img/Vogelperspektive.jpeg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
   }
 
   @media (max-width: 450px) {

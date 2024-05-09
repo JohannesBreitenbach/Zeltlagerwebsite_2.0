@@ -10,7 +10,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
   return (
     <>
       <div id="navbarComponent">
-        <nav className="navbar navbar-expand-lg fixed-top navbar-scroll mask-custom">
+        <nav className="navbar navbar-expand-lg navbar-scroll mask-custom">
           <div className="container-fluid">
             <a
               className="navbar-brand"

@@ -1,4 +1,8 @@
 #navbarComponent {
+  .navbar-nav .nav-link {
+    cursor: pointer;
+  }
+
   .active {
     text-decoration: underline !important;
     color: white !important;

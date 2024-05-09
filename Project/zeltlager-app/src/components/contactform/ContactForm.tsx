@@ -5,21 +5,23 @@ import FormCard from "./FormCard";
 function ContactForm() {
   return (
     <>
-      <header id="contactComponent">
-        <section>
-          <div id="intro" className="bg-image">
-            <div className="mask">
-              <div className="container d-flex justify-content-center h-100">
-                <div className="row">
-                  <div className="col-12">
-                    <FormCard />
-                  </div>
-                </div>
+      <div id="contactComponent">
+        <section
+          id="intro"
+          className="bg-image position-fixed top-0 start-0 z-n1"
+        >
+          <div className="mask"></div>
+        </section>
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="contact-form-container">
+                <FormCard />
               </div>
             </div>
           </div>
-        </section>
-      </header>
+        </div>
+      </div>
     </>
   );
 }

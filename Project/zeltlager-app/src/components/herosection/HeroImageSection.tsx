@@ -10,7 +10,7 @@ function HeroImageSection() {
               <div className="container d-flex justify-content-center align-items-center h-100">
                 <div className="row align-items-center">
                   <div className="col-12">
-                    <h1 className="mb-0 text-white display-1">Zeltlager</h1>
+                    <h1 className="mb-0 text-white page-title">Zeltlager</h1>
                   </div>
                 </div>
               </div>
@@ -19,8 +19,8 @@ function HeroImageSection() {
         </section>
       </header>
 
-      <main>
-        <div className="container my-5 py-5"></div>
+      <main className="content-below">
+        <h1>Content below</h1>
       </main>
     </>
   );
