@@ -19,6 +19,8 @@ function HeroImageSection() {
         </section>
       </header>
 
+      <section className="curved"></section>
+
       <main className="content-below">
         <h1>Content below</h1>
       </main>
