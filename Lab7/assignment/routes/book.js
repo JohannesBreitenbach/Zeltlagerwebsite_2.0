@@ -47,4 +47,19 @@ router.post("/add", (req, res, next) => {
   res.redirect("/");
 });
 
+router.post("/delete", (req, res, next) => {
+  console.log("delete function called");
+  const isbnToDelete = req.body.isbn;
+
+  const bookIndex = req.app.locals.books.findIndex(
+    (book) => book.isbn === isbnToDelete
+  );
+  if (bookIndex !== -1) {
+    req.app.locals.books.splice(bookIndex, 1);
+    res.redirect("/");
+  } else {
+    res.status(404).sendFile(path.join(__dirname, "..", "views", "404.html"));
+  }
+});
+
 module.exports = router;
