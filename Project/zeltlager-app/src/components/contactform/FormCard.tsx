@@ -7,7 +7,7 @@ function FormCard() {
             <h1>Kontakt</h1>
 
             <form>
-              <div className="row needs-validation">
+              <div className="row needs-validation mb-3">
                 <div className="col-12 col-lg-6">
                   <label htmlFor="firstName">Vorname</label>
                   <input
@@ -31,7 +31,7 @@ function FormCard() {
                 </div>
               </div>
 
-              <div className="row needs-validation">
+              <div className="row needs-validation  mb-3">
                 <div className="col-12">
                   <label htmlFor="email">E-Mail</label>
                   <input
@@ -44,11 +44,22 @@ function FormCard() {
                 </div>
               </div>
 
-              <div className="row needs-validation">
+              <div className="row needs-validation mb-3">
                 <div className="col-12">
-                  <label htmlFor="email">Telefonnummer (optional)</label>
+                  <label htmlFor="phone">Telefonnummer (optional)</label>
                   <input type="text" className="form-control" id="phone" />
                 </div>
+              </div>
+
+              <div className="mb-3">
+                <label htmlFor="message" className="form-label">
+                  Worum gehts?
+                </label>
+                <textarea
+                  className="form-control"
+                  id="message"
+                  rows={4}
+                ></textarea>
               </div>
 
               <p>
@@ -62,7 +73,7 @@ function FormCard() {
                 <div className="col-12 d-flex justify-content-end">
                   <button
                     type="submit"
-                    className="btn btn-success col-5 col-lg-2"
+                    className="btn btn-primary col-5 col-lg-2"
                   >
                     Send
                   </button>
