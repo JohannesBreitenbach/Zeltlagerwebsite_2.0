@@ -4,30 +4,70 @@ function FormCard() {
       <div className="contact-form-card">
         <div className="card">
           <div className="card-body">
-            {/* Your contact form content goes here */}
-            <h2>Contact Us</h2>
+            <h1>Kontakt</h1>
+
             <form>
-              <div className="mb-3">
-                <label htmlFor="name" className="form-label">
-                  Name
-                </label>
-                <input type="text" id="name" className="form-control" />
+              <div className="row needs-validation">
+                <div className="col-12 col-lg-6">
+                  <label htmlFor="firstName">Vorname</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="firstName"
+                    placeholder=""
+                    required
+                  />
+                </div>
+
+                <div className="col-12 col-lg-6">
+                  <label htmlFor="lastName">Nachname</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="lastName"
+                    placeholder=""
+                    required
+                  />
+                </div>
               </div>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                  Email
-                </label>
-                <input type="email" id="email" className="form-control" />
+
+              <div className="row needs-validation">
+                <div className="col-12">
+                  <label htmlFor="email">E-Mail</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    placeholder="email@beispiel.com"
+                    required
+                  />
+                </div>
               </div>
-              <div className="mb-3">
-                <label htmlFor="message" className="form-label">
-                  Message
-                </label>
-                <textarea id="message" className="form-control"></textarea>
+
+              <div className="row needs-validation">
+                <div className="col-12">
+                  <label htmlFor="email">Telefonnummer (optional)</label>
+                  <input type="text" className="form-control" id="phone" />
+                </div>
               </div>
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
+
+              <p>
+                Alle Daten werden selbstverständlich nur dafür genutzt, Sie zu
+                kontaktieren.
+              </p>
+
+              <hr />
+              <h3>Add reCaptcha!</h3>
+              <div className="row">
+                <div className="col-12 d-flex justify-content-end">
+                  <button
+                    type="submit"
+                    className="btn btn-success col-5 col-lg-2"
+                  >
+                    Send
+                  </button>
+                </div>
+              </div>
             </form>
           </div>
         </div>

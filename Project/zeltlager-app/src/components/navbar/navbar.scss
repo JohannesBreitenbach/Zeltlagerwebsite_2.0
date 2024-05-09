@@ -36,10 +36,6 @@
     box-shadow: none;
   }
 
-  .navbar-scrolled {
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
-  }
-
   .navbar-scrolled .navbar-brand,
   .navbar-scrolled .nav-link,
   .navbar-scrolled .fa-bars {
@@ -48,5 +44,14 @@
 
   .navbar-scrolled {
     background-color: #fff;
+  }
+
+  .fa-instagram {
+    font-size: 1.5rem;
+  }
+
+  .mask-custom {
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.15);
   }
 }
