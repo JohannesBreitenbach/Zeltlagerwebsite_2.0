@@ -1,12 +1,12 @@
-import styles from "./herosection.css";
+import "./herosection.scss";
 
 function HeroImageSection() {
   return (
     <>
-      <header>
+      <header id="heroImageComponent">
         <section>
           <div id="intro" className="bg-image">
-            <div className={styles.mask}>
+            <div className="mask">
               <div className="container d-flex justify-content-center align-items-center h-100">
                 <div className="row align-items-center">
                   <div className="col-12">

@@ -1,11 +1,11 @@
 import React from "react";
-import "./contactform.css";
+import "./contactform.scss";
 import FormCard from "./FormCard";
 
 function ContactForm() {
   return (
     <>
-      <header>
+      <header id="contactComponent">
         <section>
           <div id="intro" className="bg-image">
             <div className="mask">

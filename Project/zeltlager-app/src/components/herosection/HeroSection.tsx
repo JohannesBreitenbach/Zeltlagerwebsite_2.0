@@ -1,6 +1,5 @@
 import HeroCarousel from "./HeroCarousel";
 import HeroImageSection from "./HeroImageSection";
-import "./herosection.css";
 
 function HeroSection() {
   return (
