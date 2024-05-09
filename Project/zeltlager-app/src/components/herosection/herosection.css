@@ -22,7 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; /* Center text horizontally */
+  text-align: center;
 }
 
 .row.align-items-center {

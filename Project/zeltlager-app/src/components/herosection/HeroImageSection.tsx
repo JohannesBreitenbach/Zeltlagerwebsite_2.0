@@ -1,4 +1,4 @@
-import "./herosection.css";
+import styles from "./herosection.css";
 
 function HeroImageSection() {
   return (
@@ -6,7 +6,7 @@ function HeroImageSection() {
       <header>
         <section>
           <div id="intro" className="bg-image">
-            <div className="mask">
+            <div className={styles.mask}>
               <div className="container d-flex justify-content-center align-items-center h-100">
                 <div className="row align-items-center">
                   <div className="col-12">
