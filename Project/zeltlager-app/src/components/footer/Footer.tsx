@@ -8,8 +8,8 @@ interface FooterProps {
 
 function Footer({ activePage, setActivePage }: FooterProps) {
   return (
-    <div className="container footer-bg">
-      <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div className="footer-bg">
+      <footer className="d-flex flex-wrap justify-content-between align-items-center footer navbar-fixed-bottom px-3 py-3 border-top">
         <p className="col-md-4 mb-0 text-body-secondary">© 2024 EyJB Media</p>
 
         <ul className="nav col-md-4 justify-content-end">
