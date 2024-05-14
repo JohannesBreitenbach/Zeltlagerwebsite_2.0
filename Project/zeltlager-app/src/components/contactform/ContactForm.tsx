@@ -1,6 +1,7 @@
 import React from "react";
 import "./contactform.scss";
 import FormCard from "./FormCard";
+import FaqSection from "../faq_section/FaqSection";
 
 function ContactForm() {
   return (
@@ -14,14 +15,13 @@ function ContactForm() {
         </section>
         <div className="container">
           <div className="row">
-            <div className="col-12">
-              <div className="contact-form-container">
-                <FormCard />
-              </div>
+            <div className="col-12 contact-form-container p-5">
+              <FormCard />
             </div>
           </div>
         </div>
       </div>
+      <FaqSection />
     </>
   );
 }
