@@ -8,7 +8,7 @@ interface GalleryHeaderProps {
 function GalleryHeader({ activeYear, setActiveYear }: GalleryHeaderProps) {
   return (
     <>
-      <div id="galleryHeaderComponent">
+      <div id="galleryHeaderComponent" className="p-2">
         <h1>Gallery Header</h1>
         <span
           id="pill-container"

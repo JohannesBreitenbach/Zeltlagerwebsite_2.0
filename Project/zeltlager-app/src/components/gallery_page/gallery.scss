@@ -1,4 +1,9 @@
 #galleryHeaderComponent {
-  .active {
+}
+
+#gallery-grid {
+  .grid-img-container {
+    min-width: 300px;
+    max-width: 600px;
   }
 }

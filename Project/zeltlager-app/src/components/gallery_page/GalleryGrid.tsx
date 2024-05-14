@@ -1,3 +1,5 @@
+import "./gallery.scss";
+
 interface GalleryGridProps {
   activeYear: string;
   images: { [year: string]: { src: string; alt: string }[] };
@@ -5,33 +7,25 @@ interface GalleryGridProps {
 
 function GalleryGrid({ activeYear, images }: GalleryGridProps) {
   const currImages = images[activeYear] || [];
-  console.log(currImages);
   return (
     <>
-      <div className="container">
-        <div className="row g-4">{getImages(currImages)}</div>
+      <div id="gallery-grid">
+        <div className="d-flex align-items-center justify-content-around flex-wrap">
+          {currImages.map((image) => {
+            return getImageCard(image.src, image.alt);
+          })}
+        </div>
       </div>
     </>
   );
 }
 
-const getImages = (currImages: { src: string; alt: string }[]) => {
+function getImageCard(src: string, alt: string) {
   return (
-    <>
-      {currImages.map((image) => {
-        return getImageCard(image.src, image.alt);
-      })}
-    </>
-  );
-};
-
-const getImageCard = (src: string, alt: string) => {
-  console.log("Current image:" + src);
-  return (
-    <div className="card col-4 m-1">
-      <img src={src} className="card-img" alt={alt} />
+    <div className="grid-img-container m-2">
+      <img src={src} alt={alt} className="img-fluid" />
     </div>
   );
-};
+}
 
 export default GalleryGrid;

@@ -8,7 +8,7 @@ interface MailListSectionParams {
 function MailListSection({ setActivePage }: MailListSectionParams) {
   return (
     <>
-      <div id="mail-list-section" className="p-2">
+      <div id="mail-list-section" className="p-2 pb-0">
         <h2>Interesse?</h2>
         <div className="container">
           <div className="row">
