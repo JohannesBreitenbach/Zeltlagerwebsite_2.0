@@ -1,10 +1,6 @@
 #sponsor-section {
   background-color: #689870;
   .card {
-    width: 300px;
-    .img {
-      width: 100% !important;
-      object-fit: cover;
-    }
+    max-width: 300px;
   }
 }

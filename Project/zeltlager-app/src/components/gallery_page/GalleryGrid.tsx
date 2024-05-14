@@ -1,5 +1,3 @@
-import YEAR_KEYS from "./galleryConstants";
-
 interface GalleryGridProps {
   activeYear: string;
   images: { [year: string]: { src: string; alt: string }[] };

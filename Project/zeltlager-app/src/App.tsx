@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer";
 import GalleryPage from "./components/gallery_page/GalleryPage";
 import HomePage from "./components/homepage/HomePage";
 import AboutPage from "./components/about_page/AboutPage";
+import RegistrationPage from "./components/registration_page/RegistrationPage";
 
 function App() {
   const [activePage, setActivePage] = useState(PAGE_KEYS.HOME);
@@ -22,6 +23,7 @@ function App() {
       {activePage === PAGE_KEYS.CONTACT && <ContactForm />}
       {activePage === PAGE_KEYS.GALLERY && <GalleryPage />}
       {activePage === PAGE_KEYS.ABOUT && <AboutPage />}
+      {activePage === PAGE_KEYS.APPLICATION && <RegistrationPage />}
       <Footer activePage={activePage} setActivePage={setActivePage} />
     </div>
   );

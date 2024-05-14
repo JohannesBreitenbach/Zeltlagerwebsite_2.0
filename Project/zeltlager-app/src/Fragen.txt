@@ -1,0 +1,6 @@
+Wie kann man automatisch eine E-Mail schicken?
+
+Wie binde ich die Bilder am besten ein? (100 Bilder in den assets folder?)
+
+Macht die Schnittstelle mit Google Sheets Sinn? Direkt MongoDB oder so?
+

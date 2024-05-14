@@ -15,7 +15,7 @@ function HomePage({ setActivePage }: HomePageProps) {
       <InfoSection />
       {/*<HeroCarousel />*/}
       <SponsorSection />
-      <MailListSection />
+      <MailListSection setActivePage={setActivePage} />
     </>
   );
 }

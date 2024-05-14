@@ -1,6 +1,11 @@
+import PAGE_KEYS from "../../../constants";
 import "./maillistsection.scss";
 
-function MailListSection() {
+interface MailListSectionParams {
+  setActivePage: (activePage: string) => void;
+}
+
+function MailListSection({ setActivePage }: MailListSectionParams) {
   return (
     <>
       <div id="mail-list-section" className="p-2">
@@ -8,14 +13,19 @@ function MailListSection() {
         <div className="container">
           <div className="row">
             <div id="imageContainer" className="col-6">
-              <img src="/src/assets/img/Lagerfeuer.jpeg" className="w-100" />
+              <img src="/src/assets/img/Party.png" className="w-100" />
             </div>
             <div
               id="contentContainer"
               className="col-6 d-flex align-items-start justify-content-center flex-column"
             >
               <h3>Dann direkt anmelden!</h3>
-              <button className="button button-primary">Zur Anmeldung</button>
+              <button
+                className="btn btn-primary"
+                onClick={() => setActivePage(PAGE_KEYS.APPLICATION)}
+              >
+                Zur Anmeldung ➔
+              </button>
               <h3>Oder ganz unverbindlich in den E-Mail Verteiler eintragen</h3>
               <div className="card border border-primary p-2">
                 <form>
