@@ -163,6 +163,7 @@ function FaqSection() {
 
   return (
     <div id="faq-section">
+      <h1 className="p-2 pb-0">Häufig gestellte Fragen:</h1>
       <div className="faqs">
         {faqs.map((faq, index) => (
           <FaqSingle
