@@ -5,3 +5,7 @@ Wie binde ich die Bilder am besten ein? (100 Bilder in den assets folder?)
 Macht die Schnittstelle mit Google Sheets Sinn? Direkt MongoDB oder so?
 
 Ist allgemein ein CMS nötig?
+
+Global variable handling?
+
+String file?
