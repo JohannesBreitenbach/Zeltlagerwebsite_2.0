@@ -1,3 +1,13 @@
 #mail-list-section {
-  background-color: #b77b32;
+  background: rgb(4, 52, 87);
+  background: linear-gradient(
+    180deg,
+    rgba(4, 52, 87, 1) 0%,
+    rgba(4, 4, 4, 1) 36%
+  );
+  color: whitesmoke;
+
+  #imageContainer {
+    padding: 0;
+  }
 }

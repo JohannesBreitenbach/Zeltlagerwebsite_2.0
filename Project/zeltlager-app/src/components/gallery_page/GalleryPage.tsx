@@ -24,9 +24,9 @@ const images = {
     { src: "src/assets/img/Essen.jpeg", alt: "Kinder beim Essen" },
   ],
   2022: [
-    { src: "src/assets/img/Quellenspiel.jpeg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Quellenspiel.jpeg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Quellenspiel.jpeg", alt: "Kinder beim Essen" },
+    { src: "src/assets/img/Zeltlager2023-41.jpg", alt: "Kinder beim Essen" },
+    { src: "src/assets/img/Zeltlager2023-41.jpg", alt: "Kinder beim Essen" },
+    { src: "src/assets/img/Zeltlager2023-41.jpg", alt: "Kinder beim Essen" },
   ],
   2023: [
     { src: "src/assets/img/Quidditch.jpeg", alt: "Kinder beim Essen" },

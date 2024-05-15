@@ -112,37 +112,40 @@ function FaqSection() {
 function FaqSection() {
   const [faqs, setFaqs] = useState([
     {
-      question: "How many programmers does it take to screw a lightbulb?",
+      question: "Für wen ist das Zeltlager?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra lorem eu dolor rhoncus, at scelerisque ligula gravida. Sed porta id mi sit amet convallis. Etiam iaculis massa sit amet lacus blandit sodales. Nulla ultrices velit a diam placerat congue. Pellentesque iaculis, ipsum quis eleifend dapibus, est dui eleifend ante, quis fermentum mi ligula quis nisl. Ut et ex dui. Integer id venenatis quam.",
-      open: true,
-    },
-    {
-      question: "Who is the most awesome person?",
-      answer: "You! The viewer!",
+        "Das Zeltlager richtet sich an Kinder zwischen 9 und 14 Jahren, die gerne eine Woche mit Freunden in der Natur verbringen und dabei viel Spaß haben möchten.",
       open: false,
     },
     {
-      question:
-        "How many questions does it take to makes a succesful FAQ Page?",
-      answer: "This many!",
-      open: false,
-    },
-    {
-      question: "How many programmers does it take to screw a lightbulb?",
+      question: "Wie kann ich mich anmelden?",
+      //TODO: Falls Anmeldung online möglich, hier ändern
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra lorem eu dolor rhoncus, at scelerisque ligula gravida. Sed porta id mi sit amet convallis. Etiam iaculis massa sit amet lacus blandit sodales. Nulla ultrices velit a diam placerat congue. Pellentesque iaculis, ipsum quis eleifend dapibus, est dui eleifend ante, quis fermentum mi ligula quis nisl. Ut et ex dui. Integer id venenatis quam.",
+        "Einfach den Anmeldungsbogen runterladen, ausfüllen und per Email an info.ulferzeltlager@web.de schicken.",
       open: false,
     },
     {
-      question: "Who is the most awesome person?",
-      answer: "You! The viewer!",
+      question: "Bis wann muss ich mich anmelden?",
+      answer:
+        "Die Anmeldefrist für das Zeltlager 2024 ist der 24.06.2024, es kann jedoch sein dass bis dahin schon alle Plätze ausgebucht sind. Deshalb gilt, je früher desto besser!",
       open: false,
     },
     {
-      question:
-        "How many questions does it take to makes a succesful FAQ Page?",
-      answer: "This many!",
+      question: "Was kostet das Zeltlager?",
+      answer:
+        "Für das erste Kind einer Familie beträgt die Teilnahmegebühr 95€, für jedes weitere Kind sind es 90€.",
+      open: false,
+    },
+    {
+      question: "Was ist in der Teilnahmegebühr enthalten?",
+      answer:
+        "Hin- und Rückfahrt von den Stadtwerken Aschaffenburg zum Zeltpatz, Frühstück, Mittag- und Abendessen, Tee und Leitungswasser und jsjsjsjsjjshsjsjdkwksdk.",
+      open: false,
+    },
+    {
+      question: "Wie bezahle ich die Teilnahmegebühr?",
+      answer:
+        "Einfach auf folgendes Konto Überweisen: \n \n IBAN: DE63 7955 0000 0008 0568 63 \n BIC: BYLADEM1ASA \n (Kontoinhaber: Kath. Kirchenstiftung ULF)",
       open: false,
     },
   ]);

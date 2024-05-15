@@ -4,11 +4,11 @@ function InfoSection() {
   return (
     <>
       <div id="info-section" className="">
-        <div className="container">
+        <div className="container pb-3">
           <div className="row">
             <div id="imageContainer" className="col-4">
               <img
-                src="src\assets\img\Carlo_without_background.png"
+                src="src\assets\img\Gruppenbild_cropped.jpg"
                 className="w-100"
               />
             </div>
