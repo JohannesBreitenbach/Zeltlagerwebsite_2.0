@@ -1,5 +1,10 @@
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, useEffect } from "react";
 import "./registrationpage.scss";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { registerLocale, setDefaultLocale } from "react-datepicker";
+import { de } from "date-fns/locale/de";
+registerLocale("de", de);
 
 interface RegistrationData {
   firstName: string;
@@ -7,7 +12,7 @@ interface RegistrationData {
   address: string;
   phone: string;
   email: string;
-  birthday: string;
+  birthday: Date | null;
   medication: string;
   canSwim: boolean;
   isVegetarian: boolean;
@@ -17,6 +22,7 @@ interface RegistrationData {
   wantsTshirt: boolean;
   tshirtSize: string;
   additionalInfo: string;
+  payCheck: boolean;
 }
 
 function RegistrationPage() {
@@ -26,7 +32,7 @@ function RegistrationPage() {
     address: "",
     phone: "",
     email: "",
-    birthday: "",
+    birthday: null,
     medication: "",
     canSwim: true,
     isVegetarian: false,
@@ -36,25 +42,8 @@ function RegistrationPage() {
     wantsTshirt: true,
     tshirtSize: "",
     additionalInfo: "",
+    payCheck: false,
   });
-
-  const handleInputChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value, type } = e.target;
-    if (type === "checkbox") {
-      const { checked } = e.target as HTMLInputElement;
-      setCurrentData((prevData) => ({
-        ...prevData,
-        [name]: checked,
-      }));
-    } else {
-      setCurrentData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
-    }
-  };
 
   return (
     <div id="registration-page" className="container-fluid p-4">
@@ -63,7 +52,7 @@ function RegistrationPage() {
       </div>
       <form>
         <div className="row mb-3">
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-md-6">
             <label htmlFor="firstName">Vorname</label>
             <input
               type="text"
@@ -72,11 +61,16 @@ function RegistrationPage() {
               name="firstName"
               placeholder=""
               value={currentData.firstName}
-              onChange={handleInputChange}
+              onChange={(e) =>
+                setCurrentData((prevData) => ({
+                  ...prevData,
+                  firstName: e.target.value,
+                }))
+              }
               required
             />
           </div>
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-md-6">
             <label htmlFor="lastName">Nachname</label>
             <input
               type="text"
@@ -85,41 +79,58 @@ function RegistrationPage() {
               name="lastName"
               placeholder=""
               value={currentData.lastName}
-              onChange={handleInputChange}
+              onChange={(e) =>
+                setCurrentData((prevData) => ({
+                  ...prevData,
+                  lastName: e.target.value,
+                }))
+              }
               required
             />
           </div>
         </div>
 
         <div className="row mb-3">
-          <div className="col-lg-3 col-sm-6">
+          <div className="col-12 col-md-3">
             <label htmlFor="birthday">Geburtsdatum</label>
-            <input
+            <DatePicker
               id="birthday"
               name="birthday"
+              selected={currentData.birthday}
               className="form-control"
-              type="date"
-              value={currentData.birthday}
-              onChange={handleInputChange}
+              onChange={(date: Date) =>
+                setCurrentData((prevData) => ({
+                  ...prevData,
+                  birthday: date,
+                }))
+              }
+              locale="de"
+              dateFormat={"dd.MM.yyyy"}
+              required
             />
           </div>
-          <div className="col-9">
+          <div className="col-12 col-md-9">
             <label htmlFor="email">E-Mail</label>
             <input
               type="email"
               className="form-control"
               id="email"
               name="email"
-              placeholder="youremail@example.com"
+              placeholder="beispiel@email.com"
               value={currentData.email}
-              onChange={handleInputChange}
+              onChange={(e) =>
+                setCurrentData((prevData) => ({
+                  ...prevData,
+                  email: e.target.value,
+                }))
+              }
               required
             />
           </div>
         </div>
 
         <div className="row mb-3">
-          <div className="col-12 col-lg-8">
+          <div className="col-12 col-md-8 mb-3 mb-md-0">
             <label htmlFor="address">Adresse</label>
             <input
               type="text"
@@ -128,11 +139,16 @@ function RegistrationPage() {
               name="address"
               placeholder=""
               value={currentData.address}
-              onChange={handleInputChange}
+              onChange={(e) =>
+                setCurrentData((prevData) => ({
+                  ...prevData,
+                  address: e.target.value,
+                }))
+              }
               required
             />
           </div>
-          <div className="col-12 col-lg-4">
+          <div className="col-12 col-md-4">
             <label htmlFor="phone">Telefonnummer</label>
             <input
               type="tel"
@@ -141,14 +157,19 @@ function RegistrationPage() {
               name="phone"
               placeholder=""
               value={currentData.phone}
-              onChange={handleInputChange}
+              onChange={(e) =>
+                setCurrentData((prevData) => ({
+                  ...prevData,
+                  phone: e.target.value,
+                }))
+              }
               required
             />
           </div>
         </div>
 
         <div className="row mb-3">
-          <div className="col-12 col-lg-6 d-flex align-items-center">
+          <div className="col-12 d-flex align-items-center justify-content-between">
             <label htmlFor="canSwim" className="me-3">
               Mein Kind kann schwimmen.
             </label>
@@ -194,7 +215,7 @@ function RegistrationPage() {
         </div>
 
         <div className="row mb-3">
-          <div className="col-12 col-lg-6 d-flex align-items-center">
+          <div className="col-12 d-flex align-items-center justify-content-between">
             <label htmlFor="isVegetarian" className="me-3">
               Mein Kind isst vegetarisch.
             </label>
@@ -240,7 +261,7 @@ function RegistrationPage() {
         </div>
 
         <div className="row mb-3">
-          <div className="col-12 col-lg-6 d-flex align-items-center">
+          <div className="col-12 d-flex align-items-center justify-content-between">
             <label htmlFor="isVacc" className="me-3">
               Mein Kind ist gegen Zecken geimpft.
             </label>
@@ -286,7 +307,7 @@ function RegistrationPage() {
         </div>
 
         <div className="row mb-3">
-          <div className="col-12 col-lg-6 d-flex align-items-center">
+          <div className="col-12 d-flex align-items-center justify-content-between">
             <label htmlFor="canBivouac" className="me-3">
               Mein Kind darf am Biwak (Übernachtung im Freien) teilnehmen.
             </label>
@@ -332,54 +353,52 @@ function RegistrationPage() {
         </div>
 
         <div className="row mb-3">
-          <div className="col-12 col-lg-8 d-flex align-items-center">
+          <div className="col-12 d-flex align-items-center justify-content-between">
             <label htmlFor="canPhoto" className="me-3">
               Ich bin damit einverstanden, dass die Zeltlagerfotos, auf denen
               mein Kind zu sehen ist, veröffentlicht werden dürfen.*
             </label>
-            <div>
-              <div className="form-check form-check-inline">
-                <input
-                  id="canPhotoYes"
-                  className="form-check-input"
-                  name="canPhoto"
-                  type="radio"
-                  checked={currentData.canPhoto === true}
-                  onChange={() =>
-                    setCurrentData((prevData) => ({
-                      ...prevData,
-                      canPhoto: true,
-                    }))
-                  }
-                />
-                <label htmlFor="canPhotoYes" className="form-check-label">
-                  Ja
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  id="canPhotoNo"
-                  className="form-check-input"
-                  name="canPhoto"
-                  type="radio"
-                  checked={currentData.canPhoto === false}
-                  onChange={() =>
-                    setCurrentData((prevData) => ({
-                      ...prevData,
-                      canPhoto: false,
-                    }))
-                  }
-                />
-                <label htmlFor="canPhotoNo" className="form-check-label">
-                  Nein
-                </label>
-              </div>
+            <div className="form-check form-check-inline">
+              <input
+                id="canPhotoYes"
+                className="form-check-input"
+                name="canPhoto"
+                type="radio"
+                checked={currentData.canPhoto === true}
+                onChange={() =>
+                  setCurrentData((prevData) => ({
+                    ...prevData,
+                    canPhoto: true,
+                  }))
+                }
+              />
+              <label htmlFor="canPhotoYes" className="form-check-label">
+                Ja
+              </label>
+            </div>
+            <div className="form-check form-check-inline">
+              <input
+                id="canPhotoNo"
+                className="form-check-input"
+                name="canPhoto"
+                type="radio"
+                checked={currentData.canPhoto === false}
+                onChange={() =>
+                  setCurrentData((prevData) => ({
+                    ...prevData,
+                    canPhoto: false,
+                  }))
+                }
+              />
+              <label htmlFor="canPhotoNo" className="form-check-label">
+                Nein
+              </label>
             </div>
           </div>
         </div>
 
         <div className="row mb-3">
-          <div className="col-12 d-flex align-items-center">
+          <div className="col-12 d-flex align-items-center justify-content-between">
             <label htmlFor="canPhoto" className="me-3">
               Ich möchte ein Zeltlager T-Shirt für mein Kind bestellen.
             </label>
@@ -390,11 +409,11 @@ function RegistrationPage() {
                   className="form-check-input"
                   name="tshirt"
                   type="radio"
-                  checked={currentData.canPhoto === true}
+                  checked={currentData.wantsTshirt === true}
                   onChange={() =>
                     setCurrentData((prevData) => ({
                       ...prevData,
-                      canPhoto: true,
+                      wantsTshirt: true,
                     }))
                   }
                 />
@@ -408,11 +427,11 @@ function RegistrationPage() {
                   className="form-check-input"
                   name="tshirt"
                   type="radio"
-                  checked={currentData.canPhoto === false}
+                  checked={currentData.wantsTshirt === false}
                   onChange={() =>
                     setCurrentData((prevData) => ({
                       ...prevData,
-                      canPhoto: false,
+                      wantsTshirt: false,
                     }))
                   }
                 />
@@ -424,7 +443,7 @@ function RegistrationPage() {
           </div>
         </div>
 
-        <div className="row mb-3">
+        <div className="row mb-3" hidden={!currentData.wantsTshirt}>
           <div className="col-6 col-lg-3">
             <label htmlFor="tshirtSize">T-Shirt Größe</label>
             <input
@@ -434,8 +453,12 @@ function RegistrationPage() {
               name="tshirtSize"
               placeholder=""
               value={currentData.tshirtSize}
-              onChange={handleInputChange}
-              required
+              onChange={(e) =>
+                setCurrentData((prevData) => ({
+                  ...prevData,
+                  tshirtSize: e.target.value,
+                }))
+              }
             />
           </div>
         </div>
@@ -451,12 +474,17 @@ function RegistrationPage() {
               name="additionalInfo"
               placeholder=""
               value={currentData.additionalInfo}
-              onChange={handleInputChange}
+              onChange={(e) =>
+                setCurrentData((prevData) => ({
+                  ...prevData,
+                  additionalInfo: e.target.value,
+                }))
+              }
             ></textarea>
           </div>
         </div>
 
-        <p>
+        <p id="hint">
           *(Bitte beachten Sie, dass wenn Sie gegen die Veröffentlichung
           (Pfarrei-Website, Abschlussfotos, Ausstellung in Jugendräumen) der im
           Rahmen des Zeltlagers gemachten Bilder sind, wir leider keine
@@ -468,16 +496,35 @@ function RegistrationPage() {
           „Unsere Liebe Frau“ & Pfarreiengemeinschaft St. Martin in Höhefeld an.
         </h4>
 
-        <div className="row">
-          <div className="col-12 d-flex justify-content-end">
-            <button
-              type="submit"
-              className="btn btn-primary col-5 col-lg-2"
-              onClick={() => console.log(currentData)}
-            >
-              Anmeldung abschicken
-            </button>
-          </div>
+        <div className="form-check">
+          <input
+            className="form-check-input"
+            type="checkbox"
+            value=""
+            id="payCheck"
+            checked={currentData.payCheck}
+            onChange={() =>
+              setCurrentData((prevData) => ({
+                ...prevData,
+                payCheck: !prevData.payCheck,
+              }))
+            }
+          />
+          <label className="form-check-label" htmlFor="payCheck">
+            Mir ist bewusst, dass die Anmeldung erst mit eingegangener Zahlung
+            gültig ist.
+          </label>
+        </div>
+
+        <div className="container-fluid d-flex justify-content-end">
+          <button
+            type="submit"
+            className="btn btn-primary"
+            onClick={() => console.log(currentData)}
+            disabled={!currentData.payCheck}
+          >
+            Anmeldung abschicken
+          </button>
         </div>
       </form>
     </div>

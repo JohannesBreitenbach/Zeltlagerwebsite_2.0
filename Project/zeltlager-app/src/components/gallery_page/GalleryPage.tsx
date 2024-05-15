@@ -10,23 +10,16 @@ const imageList = images.keys().map(image:  => images(image));*/
 
 const images = {
   2021: [
-    { src: "src/assets/img/Essen.jpeg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Essen.jpeg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Essen.jpeg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Essen.jpeg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Essen.jpeg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Essen.jpeg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Essen.jpeg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Essen.jpeg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Essen.jpeg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Essen.jpeg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Essen.jpeg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Essen.jpeg", alt: "Kinder beim Essen" },
+    { src: "src/assets/img/Lagerfeuer.jpeg", alt: "Kinder beim Essen" },
+    { src: "src/assets/img/Lagerfeuer.jpeg", alt: "Kinder beim Essen" },
+    { src: "src/assets/img/Lagerfeuer.jpeg", alt: "Kinder beim Essen" },
+    { src: "src/assets/img/Lagerfeuer.jpeg", alt: "Kinder beim Essen" },
+    { src: "src/assets/img/Lagerfeuer.jpeg", alt: "Kinder beim Essen" },
   ],
   2022: [
-    { src: "src/assets/img/Zeltlager2023-41.jpg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Zeltlager2023-41.jpg", alt: "Kinder beim Essen" },
-    { src: "src/assets/img/Zeltlager2023-41.jpg", alt: "Kinder beim Essen" },
+    { src: "src/assets/img/Vogelperspektive.jpeg", alt: "Kinder beim Essen" },
+    { src: "src/assets/img/Vogelperspektive.jpeg", alt: "Kinder beim Essen" },
+    { src: "src/assets/img/Vogelperspektive.jpeg", alt: "Kinder beim Essen" },
   ],
   2023: [
     { src: "src/assets/img/Quidditch.jpeg", alt: "Kinder beim Essen" },
