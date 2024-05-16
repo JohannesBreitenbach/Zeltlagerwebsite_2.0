@@ -491,10 +491,10 @@ function RegistrationPage() {
           Erinnerungsfotos zur Verfügung stellen können)
         </p>
         <hr />
-        <h4>
+        <h5>
           Hiermit melde ich mein Kind zum diesjährigen Zeltlager der Pfarrei
           „Unsere Liebe Frau“ & Pfarreiengemeinschaft St. Martin in Höhefeld an.
-        </h4>
+        </h5>
 
         <div className="form-check">
           <input

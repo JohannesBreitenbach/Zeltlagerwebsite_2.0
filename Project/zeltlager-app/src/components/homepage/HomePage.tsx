@@ -9,6 +9,9 @@ interface HomePageProps {
 }
 
 function HomePage({ setActivePage }: HomePageProps) {
+  /*
+  Allgemein: Bänder, auch komplett IMageband
+  */
   return (
     <>
       <HeroImageSection />
