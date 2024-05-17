@@ -104,3 +104,23 @@
     fill: #ab9358;
   }
 }
+
+#custom-countdown {
+  .digit-container {
+    max-width: 150px;
+  }
+
+  h1 {
+    font-size: 9rem;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .countdown-flex {
+    gap: 80px;
+  }
+}

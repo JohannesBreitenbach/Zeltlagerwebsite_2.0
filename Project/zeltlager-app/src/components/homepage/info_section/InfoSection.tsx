@@ -3,8 +3,8 @@ import "./infosection.scss";
 function InfoSection() {
   return (
     <>
-      <div id="info-section" className="">
-        <div className="container pb-3">
+      <div id="info-section" className="mt-n3">
+        <div className="container p-3">
           <div className="row">
             <div id="imageContainer" className="col-4">
               <img
