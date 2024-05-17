@@ -1,16 +1,33 @@
 import "./navbar.scss";
 import PAGE_KEYS from "../../constants.tsx";
+import { useState } from "react";
 
 interface NavbarProps {
-  activePage: String;
+  activePage: string;
   setActivePage: (activePage: string) => void;
 }
 
 function Navbar({ activePage, setActivePage }: NavbarProps) {
+  //false: transparent, true: solid color (when scrolled)
+  const [bgSolid, setBgSolid] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setBgSolid(true);
+    } else {
+      setBgSolid(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeColor);
+
   return (
     <>
       <div id="navbarComponent">
-        <nav className="navbar navbar-expand-lg navbar-scroll mask-custom">
+        <nav
+          className={`navbar fixed-top navbar-expand-lg navbar-scroll ${
+            bgSolid ? "navbar-scrolled" : "mask-custom"
+          }`}
+        >
           <div className="container-fluid">
             <a
               className="navbar-brand"
@@ -21,14 +38,15 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
             <button
               className="navbar-toggler"
               type="button"
-              data-mdb-toggle="collapse"
-              data-mdb-target="#navbarSupportedContent"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <i className="fas fa-bars"></i>
+              <span className="navbar-toggler-icon"></span>
             </button>
+
             <div
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
@@ -41,6 +59,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                       activePage === PAGE_KEYS.HOME ? "active" : ""
                     }`}
                     aria-current="page"
+                    role="button"
                     onClick={() => setActivePage(PAGE_KEYS.HOME)}
                   >
                     Home
@@ -52,6 +71,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                     className={`nav-link ${
                       activePage === PAGE_KEYS.ABOUT ? "active" : ""
                     }`}
+                    role="button"
                     onClick={() => setActivePage(PAGE_KEYS.ABOUT)}
                   >
                     Über uns
@@ -63,6 +83,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                     className={`nav-link ${
                       activePage === PAGE_KEYS.GALLERY ? "active" : ""
                     }`}
+                    role="button"
                     onClick={() => setActivePage(PAGE_KEYS.GALLERY)}
                   >
                     Galerie
@@ -74,6 +95,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                     className={`nav-link ${
                       activePage === PAGE_KEYS.APPLICATION ? "active" : ""
                     }`}
+                    role="button"
                     onClick={() => setActivePage(PAGE_KEYS.APPLICATION)}
                   >
                     Anmeldung
@@ -86,6 +108,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                     className={`nav-link ${
                       activePage === PAGE_KEYS.CONTACT ? "active" : ""
                     }`}
+                    role="button"
                     onClick={() => setActivePage(PAGE_KEYS.CONTACT)}
                   >
                     Kontakt
