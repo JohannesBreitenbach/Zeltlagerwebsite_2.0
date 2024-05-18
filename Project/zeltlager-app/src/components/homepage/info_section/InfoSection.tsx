@@ -3,12 +3,15 @@ import "./infosection.scss";
 function InfoSection() {
   return (
     <>
-      <div id="info-section">
+      <div
+        id="info-section"
+        className="container-fluid d-flex align-items-center justify-content-center"
+      >
         <div className="container p-3">
           <div className="row">
             <div id="imageContainer" className="col-4">
               <img
-                src="src\assets\img\Gruppenbild_cropped.jpg"
+                src="src\assets\img\Zeltlagerplakat2024-1.png"
                 className="w-100"
               />
             </div>

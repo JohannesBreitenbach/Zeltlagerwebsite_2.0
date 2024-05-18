@@ -1,4 +1,10 @@
 #info-section {
-  background-color: #ab9358;
-  margin-top: -80px;
+  background-color: #eaeaea;
+  margin-top: -40px; //visible on header image without scroll
+
+  border-style: solid;
+  border-color: rgba(151, 14, 14, 0.8);
+  border-width: 3px;
+
+  max-width: 767px;
 }

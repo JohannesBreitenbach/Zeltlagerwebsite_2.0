@@ -18,6 +18,8 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
     }
   };
 
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
   window.addEventListener("scroll", changeColor);
 
   return (

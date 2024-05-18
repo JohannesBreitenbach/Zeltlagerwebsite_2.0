@@ -123,4 +123,49 @@
   .countdown-flex {
     gap: 80px;
   }
+
+  @media (max-width: 991px) {
+    .digit-container {
+      max-width: 50px;
+    }
+
+    h1 {
+      font-size: 5rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .countdown-flex {
+      gap: 50px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .countdown-flex {
+      flex-direction: column;
+      margin-top: 55px;
+    }
+
+    .digit-container {
+      max-width: 50px;
+    }
+
+    h1 {
+      font-size: 5rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .countdown-flex {
+      gap: 10px;
+    }
+  }
 }
