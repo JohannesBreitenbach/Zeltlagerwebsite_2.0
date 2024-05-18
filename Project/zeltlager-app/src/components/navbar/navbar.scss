@@ -12,17 +12,26 @@
     font-weight: bold;
   }
 
-  .mask-custom {
+  .navbar-brand {
+    letter-spacing: 3px;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .navbar-unscrolled {
     //backdrop-filter: blur(2px);
     background-color: rgba(0, 0, 0, 0.15);
     border-bottom-style: solid;
     border-color: rgba(255, 255, 255, 0.8);
     border-width: 1px;
+    color: white !important;
 
-    .navbar-scroll .navbar-brand,
-    .navbar-scroll .nav-link,
-    .navbar-scroll .fa-bars {
-      color: #fff;
+    .nav-link {
+      color: white;
+    }
+
+    .navbar-brand {
+      color: white;
     }
   }
 
@@ -41,17 +50,5 @@
     .navbar-scroll .fa-bars {
       color: #4f4f4f !important;
     }
-  }
-
-  .navbar-brand {
-    letter-spacing: 3px;
-    font-size: 2rem;
-    font-weight: 500;
-  }
-
-  .navbar-scrolled .navbar-brand,
-  .navbar-scrolled .nav-link,
-  .navbar-scrolled .fa-bars {
-    color: #4f4f4f;
   }
 }

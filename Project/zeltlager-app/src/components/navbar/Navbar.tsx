@@ -25,7 +25,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
       <div id="navbarComponent">
         <nav
           className={`navbar fixed-top navbar-expand-lg navbar-scroll ${
-            bgSolid ? "navbar-scrolled" : "mask-custom"
+            bgSolid ? "navbar-scrolled" : "navbar-unscrolled"
           }`}
         >
           <div className="container-fluid">
