@@ -150,31 +150,32 @@ function FaqSection() {
     },
   ]);
 
-  const toggleFAQ = (index: number) => {
-    setFaqs(
-      faqs.map((faq, i) => {
-        if (i === index) {
-          faq.open = !faq.open;
-        } else {
-          faq.open = false;
-        }
-
-        return faq;
-      })
-    );
-  };
-
   return (
     <div id="faq-section">
       <h1 className="p-2 pb-0">Häufig gestellte Fragen:</h1>
-      <div className="faqs">
+      <div id="faq-accordion-container" className="faqs accordion w-100">
         {faqs.map((faq, index) => (
-          <FaqSingle
-            faq={faq}
-            index={index}
-            key={index}
-            toggleFAQ={toggleFAQ}
-          />
+          <div className="accordion-item">
+            <h2 className="accordion-header">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target={"#collapse" + index}
+                aria-expanded="false"
+                aria-controls={"collapse" + index}
+              >
+                {faq.question}
+              </button>
+            </h2>
+            <div
+              id={"collapse" + index}
+              className="accordion-collapse collapse"
+              data-bs-parent="#faq-accordion-container"
+            >
+              <div className="accordion-body">{faq.answer}</div>
+            </div>
+          </div>
         ))}
       </div>
     </div>

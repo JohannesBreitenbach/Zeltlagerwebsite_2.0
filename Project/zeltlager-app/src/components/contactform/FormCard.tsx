@@ -1,3 +1,5 @@
+import "./formcard.scss";
+
 function FormCard() {
   return (
     <div className="contact-form-card">
@@ -62,7 +64,7 @@ function FormCard() {
               ></textarea>
             </div>
 
-            <p>
+            <p className="disclaimer">
               Alle Daten werden selbstverständlich nur dafür genutzt, Ihrer
               Anfrage nachzukommen.
             </p>
