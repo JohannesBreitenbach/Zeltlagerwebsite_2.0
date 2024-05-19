@@ -1,3 +1,5 @@
+import "./App.scss";
+
 import Navbar from "./components/navbar/Navbar";
 import ContactForm from "./components/contactform/ContactForm";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,7 +17,7 @@ function App() {
   const [activePage, setActivePage] = useState(PAGE_KEYS.HOME);
 
   return (
-    <div>
+    <div id="app">
       <Navbar activePage={activePage} setActivePage={setActivePage} />
       {activePage === PAGE_KEYS.HOME && (
         <HomePage setActivePage={setActivePage} />
