@@ -8,11 +8,11 @@ interface FooterProps {
 
 function Footer({ activePage, setActivePage }: FooterProps) {
   return (
-    <div className="footer-bg">
-      <footer className="d-flex flex-wrap justify-content-between align-items-center footer navbar-fixed-bottom px-3 py-3 border-top">
+    <div id="footer-custom">
+      <footer className="d-flex justify-content-between align-items-center footer navbar-fixed-bottom px-3 py-3 border-top">
         <p className="col-md-4 mb-0 text-body-secondary">© 2024 EyJB Media</p>
 
-        <ul className="nav col-md-4 justify-content-end">
+        <ul className="nav col-md-8 justify-content-end">
           <li className="nav-item">
             <a
               id="nav-home"
@@ -68,7 +68,7 @@ function Footer({ activePage, setActivePage }: FooterProps) {
               Kontakt
             </a>
           </li>
-          <li className="nav-item me-3 me-lg-0">
+          <li className="nav-item">
             <a className="nav-link" href="#!">
               <i className="fab fa-instagram" style={{ color: "black" }}></i>
             </a>

@@ -126,11 +126,11 @@
 
   @media (max-width: 991px) {
     .digit-container {
-      max-width: 50px;
+      max-width: 90px;
     }
 
     h1 {
-      font-size: 5rem;
+      font-size: 6rem;
       font-weight: bold;
     }
 
@@ -140,14 +140,14 @@
     }
 
     .countdown-flex {
-      gap: 50px;
+      gap: 80px;
     }
   }
 
   @media (max-width: 576px) {
     .countdown-flex {
       flex-direction: column;
-      margin-top: 55px;
+      margin-top: 45px;
     }
 
     .digit-container {
