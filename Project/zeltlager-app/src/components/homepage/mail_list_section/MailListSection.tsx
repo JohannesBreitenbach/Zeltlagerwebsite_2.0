@@ -19,9 +19,9 @@ function MailListSection({ setActivePage }: MailListSectionParams) {
             </div>
             <div
               id="contentContainer"
-              className="col-6 d-flex align-items-start justify-content-center flex-column"
+              className="col-6 d-flex align-items-center justify-content-center flex-column"
             >
-              <h2>Interesse?</h2>
+              <h1>Interesse?</h1>
               <div className="w-100 d-flex align-items-start justify-content-around flex-row">
                 <h3>Dann direkt anmelden!</h3>
                 <button
@@ -38,17 +38,15 @@ function MailListSection({ setActivePage }: MailListSectionParams) {
               <div className="card border border-primary p-2">
                 <form>
                   <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">
-                      Email address
-                    </label>
                     <input
                       type="email"
                       className="form-control"
                       id="exampleInputEmail1"
                       aria-describedby="emailHelp"
+                      placeholder="E-Mail"
                     />
                   </div>
-                  <button type="submit" className="btn btn-primary">
+                  <button type="submit" className="btn btn-primary w-100">
                     Submit
                   </button>
                 </form>
