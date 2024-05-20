@@ -9,5 +9,8 @@
 
   #imageContainer {
     padding: 0;
+    img {
+      overflow: hidden;
+    }
   }
 }

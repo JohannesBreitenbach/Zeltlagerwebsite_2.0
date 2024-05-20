@@ -13,13 +13,13 @@ function MailListSection({ setActivePage }: MailListSectionParams) {
           <div className="row">
             <div
               id="imageContainer"
-              className="col-7 col-sm-0 d-flex align-items-start justify-content-center"
+              className="col-md-6 d-none d-md-flex align-items-start justify-content-center"
             >
               <img src="/src/assets/img/Lagerfeuer.jpeg" className="w-100" />
             </div>
             <div
               id="contentContainer"
-              className="col-5 d-flex align-items-start justify-content-center flex-column"
+              className="col-6 d-flex align-items-start justify-content-center flex-column"
             >
               <h2>Interesse?</h2>
               <div className="w-100 d-flex align-items-start justify-content-around flex-row">
