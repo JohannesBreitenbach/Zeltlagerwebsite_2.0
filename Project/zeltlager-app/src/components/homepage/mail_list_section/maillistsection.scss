@@ -11,11 +11,33 @@
     padding: 0;
     img {
       overflow: hidden;
+      object-fit: cover;
     }
   }
 
   #content-container {
-    h1 {
+    #mail-title {
+      font-size: 6rem;
+      @media (max-width: 768px) {
+        font-size: 4rem;
+      }
+      @media (max-width: 576px) {
+        font-size: 3rem;
+      }
+    }
+
+    #enroll-cta,
+    #email-cta {
+      max-width: 300px;
+      height: 250px;
+    }
+
+    #content-body {
+      overflow: hidden;
+
+      h3 {
+        font-size: 1.5rem;
+      }
     }
   }
 }

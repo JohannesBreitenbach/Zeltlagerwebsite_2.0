@@ -1,4 +1,5 @@
 import HeroCarousel from "./HeroCarousel";
+import DownloadSection from "./download_section/DownloadSection";
 import HeroImageSection from "./imagesection/HeroImageSection";
 import InfoSection from "./info_section/InfoSection";
 import MailListSection from "./mail_list_section/MailListSection";
@@ -16,6 +17,8 @@ function HomePage({ setActivePage }: HomePageProps) {
     <>
       <HeroImageSection />
       <InfoSection />
+      {/*spacer*/}
+      <DownloadSection />
       {/*<HeroCarousel />*/}
       <SponsorSection />
       <MailListSection setActivePage={setActivePage} />
