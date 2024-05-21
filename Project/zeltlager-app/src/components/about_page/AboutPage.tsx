@@ -1,3 +1,4 @@
+import OrganisationSection from "./OrganisationSection";
 import "./about.scss";
 
 function AboutPage() {
@@ -30,6 +31,7 @@ function AboutPage() {
           </div>
         </div>
       </div>
+      <OrganisationSection />
     </section>
   );
 }

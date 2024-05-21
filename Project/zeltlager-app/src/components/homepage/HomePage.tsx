@@ -1,3 +1,4 @@
+import Spacer from "../spacer/Spacer";
 import HeroCarousel from "./HeroCarousel";
 import DownloadSection from "./download_section/DownloadSection";
 import HeroImageSection from "./imagesection/HeroImageSection";
@@ -17,10 +18,12 @@ function HomePage({ setActivePage }: HomePageProps) {
     <>
       <HeroImageSection />
       <InfoSection />
-      {/*spacer*/}
+      <Spacer />
       <DownloadSection />
       {/*<HeroCarousel />*/}
+      <Spacer />
       <SponsorSection />
+      <Spacer />
       <MailListSection setActivePage={setActivePage} />
     </>
   );
