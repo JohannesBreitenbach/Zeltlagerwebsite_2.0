@@ -1,0 +1,12 @@
+#image-divider {
+  max-height: 600px;
+  overflow: hidden;
+  background-color: antiquewhite;
+
+  #image-container {
+    img {
+      object-fit: cover;
+      height: 100;
+    }
+  }
+}
