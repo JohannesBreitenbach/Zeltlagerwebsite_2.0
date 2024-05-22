@@ -8,16 +8,10 @@ function QuestionSection({ setActivePage }: QuestionSectionProps) {
   return (
     <div
       id="question-section"
-      className="container-fluid d-flex align-items-center justify-content-center p-3 ps-md-0 py-md-0"
+      className="container-fluid d-flex align-items-center justify-content-center p-3 pe-sm-0 py-md-0"
     >
-      <div className="container">
+      <div className="container pe-sm-0">
         <div className="row">
-          <div
-            id="imageContainer"
-            className="col-12 col-md-6 mb-3 mb-md-0 ps-md-0"
-          >
-            <img src="src\assets\img\Zeltlager2023-110.jpg" className="w-100" />
-          </div>
           <div
             id="contentContainer"
             className="col-12 col-md-6 d-flex align-items-start justify-content-center flex-column"
@@ -39,6 +33,12 @@ function QuestionSection({ setActivePage }: QuestionSectionProps) {
                 Zu den FAQs
               </a>
             </div>
+          </div>
+          <div
+            id="imageContainer"
+            className="d-none d-md-block col-12 col-md-6 mb-3 mb-md-0 pe-sm-0"
+          >
+            <img src="src\assets\img\Zeltlager2023-110.jpg" className="w-100" />
           </div>
         </div>
       </div>

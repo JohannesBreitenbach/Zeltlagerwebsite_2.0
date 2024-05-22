@@ -8,7 +8,7 @@ function DownloadSection() {
       className="container-fluid d-flex align-items-center justify-content-center"
     >
       <div className="container py-5 border-1">
-        <div className="d-flex align-items-center justify-content-around flex-column flex-sm-row gap-2">
+        <div className="d-flex align-items-center justify-content-around flex-row gap-2">
           <a
             href="C:\Users\Johannes\Repositories\WebProject\Project\zeltlager-app\src\assets\pdf\Zeltlagerflyer2024.pdf"
             download

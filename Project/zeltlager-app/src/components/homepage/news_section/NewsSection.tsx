@@ -38,9 +38,6 @@ function NewsSection({ setActivePage }: NewsSectionProps) {
                 deines Lebens wartet auf dich!
               </p>
               <p id="important-dates" className="fw-bold">
-                Wann? 27.07 - 03.08.2024
-                <br />
-                <br />
                 Anmeldeschluss: 24.06.2024
               </p>
               <div className="d-flex align-items-center justify-content-end w-100">

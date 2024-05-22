@@ -30,20 +30,20 @@ function MailListSection({ setActivePage }: MailListSectionParams) {
           </div>
           <div
             id="content-container"
-            className="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column pb-3"
+            className="col-12 col-md-6 d-flex align-items-start justify-content-center flex-column pb-3"
           >
-            <h1 id="mail-title" className="mb-3">
+            <h1 id="mail-title" className="">
               Interesse?
             </h1>
             <div
               id="content-body"
-              className="w-100 d-flex align-items-center justify-content-center"
+              className="w-100 d-flex align-items-center justify-content-start"
             >
               <div
                 id="email-cta"
-                className="d-flex align-items-center justify-content-center flex-column"
+                className="d-flex align-items-start justify-content-center flex-column"
               >
-                <p className="text-center">
+                <p className="text-left">
                   Dann einfach in den E-Mail Verteiler eintragen und auf dem
                   Laufenden bleiben
                 </p>

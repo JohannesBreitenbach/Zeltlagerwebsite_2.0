@@ -14,12 +14,12 @@ function InfoSection({ setActivePage }: InfoSectionProps) {
       >
         <div className="container p-3">
           <div className="row">
-            <div id="imageContainer" className="col-6">
+            <div id="imageContainer" className="col-12 col-md-6">
               <img src="src\assets\img\Zeltlager_Logo.png" className="w-100" />
             </div>
             <div
               id="contentContainer"
-              className="col-6 d-flex align-items-start justify-content-center flex-column"
+              className="col-12 col-md-6 d-flex align-items-start justify-content-center flex-column"
             >
               <h1>Wilkommen beim ULFer Zeltlager!</h1>
               <p>
