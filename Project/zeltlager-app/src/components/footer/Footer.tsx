@@ -10,8 +10,9 @@ function Footer({ activePage, setActivePage }: FooterProps) {
   return (
     <div id="footer-custom">
       <footer className="d-flex justify-content-between align-items-center footer navbar-fixed-bottom px-3 py-3 border-top">
-        <p className="col-md-4 mb-0 text-body-secondary">© 2024 EyJB Media</p>
-
+        <p className="col-md-4 mb-0 text-body-secondary">
+          © 2024 EyJB Media | info.ulferzeltlager@web.de
+        </p>
         <ul className="nav col-md-8 justify-content-end">
           <li className="nav-item">
             <a

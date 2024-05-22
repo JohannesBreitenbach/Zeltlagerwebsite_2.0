@@ -20,7 +20,7 @@ function HomePage({ setActivePage }: HomePageProps) {
       <HeroImageSection />
       <InfoSection />
       <Spacer />
-      <ImageDivider />
+      <ImageDivider setActivePage={setActivePage} />
       <Spacer />
       <InfoSection />
       <Spacer />

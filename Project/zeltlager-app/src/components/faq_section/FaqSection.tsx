@@ -148,6 +148,11 @@ function FaqSection() {
         "Einfach auf folgendes Konto Überweisen: \n \n IBAN: DE63 7955 0000 0008 0568 63 \n BIC: BYLADEM1ASA \n (Kontoinhaber: Kath. Kirchenstiftung ULF)",
       open: false,
     },
+    {
+      question: "Brauche ich ein eigenes Zelt?",
+      answer: "Nein, die Kinder schlafen zusammen in Gruppenzelten.",
+      open: false,
+    },
   ]);
 
   return (
