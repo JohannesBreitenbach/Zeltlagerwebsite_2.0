@@ -157,7 +157,7 @@ function FaqSection() {
 
   return (
     <div id="faq-section">
-      <h1 className="p-2 pb-0">Häufig gestellte Fragen:</h1>
+      <h1 className="p-2 pb-0">FAQ - Häufig gestellte Fragen:</h1>
       <div id="faq-accordion-container" className="faqs accordion w-100">
         {faqs.map((faq, index) => (
           <div className="accordion-item">

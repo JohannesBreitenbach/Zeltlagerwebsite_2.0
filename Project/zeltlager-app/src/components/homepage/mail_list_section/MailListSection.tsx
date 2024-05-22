@@ -21,10 +21,7 @@ function MailListSection({ setActivePage }: MailListSectionParams) {
     <div id="mail-list-section" className="mail-list-section">
       <div className="container-fluid">
         <div className="row">
-          <div
-            id="imageContainer"
-            className="col-md-6 d-none d-md-flex align-items-start justify-content-center"
-          >
+          <div id="imageContainer" className="d-none d-md-block col-md-6">
             <img
               src="/src/assets/img/Lagerfeuer.jpeg"
               className="w-100 h-100"
@@ -33,36 +30,24 @@ function MailListSection({ setActivePage }: MailListSectionParams) {
           </div>
           <div
             id="content-container"
-            className="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column gap-1 gap-md-2 pb-3"
+            className="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column pb-3"
           >
-            <h1 id="mail-title" className="mb-5">
+            <h1 id="mail-title" className="mb-3">
               Interesse?
             </h1>
             <div
               id="content-body"
-              className="row w-100 d-flex align-items-center justify-content-between"
+              className="w-100 d-flex align-items-center justify-content-center"
             >
               <div
-                id="enroll-cta"
-                className="col-12 col-sm-6 card border border-primary p-2"
-              >
-                <h3>Dann direkt anmelden!</h3>
-                <button
-                  className="btn btn-primary mb-3"
-                  onClick={() => setActivePage(PAGE_KEYS.APPLICATION)}
-                >
-                  Zur Anmeldung ➔
-                </button>
-              </div>
-
-              <div
                 id="email-cta"
-                className="col-12 col-sm-6 card border border-primary p-2"
+                className="d-flex align-items-center justify-content-center flex-column"
               >
-                <h3>
-                  Oder ganz unverbindlich in den E-Mail Verteiler eintragen:
-                </h3>
-                <div>
+                <p className="text-center">
+                  Dann ganz unverbindlich in den E-Mail Verteiler eintragen und
+                  auf dem Laufenden bleiben
+                </p>
+                <div className="w-100">
                   <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                       <input
@@ -82,6 +67,12 @@ function MailListSection({ setActivePage }: MailListSectionParams) {
                 </div>
               </div>
             </div>
+            <a
+              onClick={() => setActivePage(PAGE_KEYS.APPLICATION)}
+              className="align-self-end text-end text-decoration-underline"
+            >
+              Oder direkt zur Anmeldung ➔
+            </a>
           </div>
         </div>
       </div>

@@ -1,6 +1,11 @@
+import PAGE_KEYS from "../../../constants";
 import "./infosection.scss";
 
-function InfoSection() {
+interface InfoSectionProps {
+  setActivePage: (activePage: string) => void;
+}
+
+function InfoSection({ setActivePage }: InfoSectionProps) {
   return (
     <>
       <div
@@ -9,15 +14,12 @@ function InfoSection() {
       >
         <div className="container p-3">
           <div className="row">
-            <div id="imageContainer" className="col-4">
-              <img
-                src="src\assets\img\Zeltlagerplakat2024-1.png"
-                className="w-100"
-              />
+            <div id="imageContainer" className="col-6">
+              <img src="src\assets\img\Zeltlager_Logo.jpg" className="w-100" />
             </div>
             <div
               id="contentContainer"
-              className="col-8 d-flex align-items-start justify-content-center flex-column"
+              className="col-6 d-flex align-items-start justify-content-center flex-column"
             >
               <h1>Wilkommen beim ULFer Zeltlager!</h1>
               <p>
@@ -26,15 +28,14 @@ function InfoSection() {
                 bieten wir Kindern und Jugendlichen eine Woche voller Abenteuer,
                 Spaß und Gemeinschaft in der Natur. Unser Team besteht aus
                 motivierten jungen Erwachsenen, die sich leidenschaftlich für
-                die Arbeit mit Kindern und Jugendlichen einsetzen. Jeder von uns
-                bringt eigene Erfahrungen und Talente mit, um ein
-                abwechslungsreiches Programm zu gestalten, das für jeden etwas
-                bietet – sei es spannende Spiele, kreative Workshops oder
-                abendliche Lagerfeuerrunden. Die Pfarrei Unsere Liebe Frau
-                unterstützt uns dabei tatkräftig und steht hinter diesem
-                wunderbaren Projekt, das Generationen von Teilnehmern
-                unvergessliche Erinnerungen beschert.
+                die Arbeit mit Kindern und Jugendlichen einsetzen.
               </p>
+              <a
+                className="btn btn-primary"
+                onClick={() => setActivePage(PAGE_KEYS.ABOUT)}
+              >
+                Mehr über uns
+              </a>
             </div>
           </div>
         </div>

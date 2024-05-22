@@ -6,6 +6,7 @@ import FaqSection from "../faq_section/FaqSection";
 function ContactForm() {
   return (
     <>
+      <FaqSection />
       <div id="contactComponent">
         <section
           id="intro"
@@ -21,7 +22,6 @@ function ContactForm() {
           </div>
         </div>
       </div>
-      <FaqSection />
     </>
   );
 }

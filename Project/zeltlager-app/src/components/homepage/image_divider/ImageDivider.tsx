@@ -10,9 +10,18 @@ function ImageDivider({ setActivePage }: ImageDividerProps) {
   return (
     <div id="image-divider" className="p-3">
       <div id="image-container" className="row w-100">
-        <img className="col-4" src="src\assets\img\Quidditch.jpeg" />
-        <img className="col-4" src="src\assets\img\Gruppenbild_cropped.jpg" />
-        <img className="col-4" src="src\assets\img\Quellenspiel.jpeg" />
+        <img
+          className="col-12 col-sm-6 col-lg-4"
+          src="src\assets\img\Quidditch.jpeg"
+        />
+        <img
+          className="d-none d-sm-block col-sm-6 col-lg-4"
+          src="src\assets\img\Gruppenbild_cropped.jpg"
+        />
+        <img
+          className="d-none d-lg-block col-4"
+          src="src\assets\img\Quellenspiel.jpeg"
+        />
       </div>
       <div className="w-100">
         <p className="text-end pt-2 pb-0 mb-0">
