@@ -44,8 +44,8 @@ function MailListSection({ setActivePage }: MailListSectionParams) {
                 className="d-flex align-items-center justify-content-center flex-column"
               >
                 <p className="text-center">
-                  Dann ganz unverbindlich in den E-Mail Verteiler eintragen und
-                  auf dem Laufenden bleiben
+                  Dann einfach in den E-Mail Verteiler eintragen und auf dem
+                  Laufenden bleiben
                 </p>
                 <div className="w-100">
                   <form onSubmit={handleSubmit}>
@@ -67,12 +67,12 @@ function MailListSection({ setActivePage }: MailListSectionParams) {
                 </div>
               </div>
             </div>
-            <a
+            {/*<a
               onClick={() => setActivePage(PAGE_KEYS.APPLICATION)}
               className="align-self-end text-end text-decoration-underline"
             >
               Oder direkt zur Anmeldung ➔
-            </a>
+  </a>*/}
           </div>
         </div>
       </div>

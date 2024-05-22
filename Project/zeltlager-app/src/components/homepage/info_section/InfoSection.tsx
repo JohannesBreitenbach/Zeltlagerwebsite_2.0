@@ -15,7 +15,7 @@ function InfoSection({ setActivePage }: InfoSectionProps) {
         <div className="container p-3">
           <div className="row">
             <div id="imageContainer" className="col-6">
-              <img src="src\assets\img\Zeltlager_Logo.jpg" className="w-100" />
+              <img src="src\assets\img\Zeltlager_Logo.png" className="w-100" />
             </div>
             <div
               id="contentContainer"
@@ -30,12 +30,14 @@ function InfoSection({ setActivePage }: InfoSectionProps) {
                 motivierten jungen Erwachsenen, die sich leidenschaftlich für
                 die Arbeit mit Kindern und Jugendlichen einsetzen.
               </p>
-              <a
-                className="btn btn-primary"
-                onClick={() => setActivePage(PAGE_KEYS.ABOUT)}
-              >
-                Mehr über uns
-              </a>
+              <div className="d-flex align-items-center justify-content-end w-100">
+                <a
+                  className="btn btn-primary"
+                  onClick={() => setActivePage(PAGE_KEYS.ABOUT)}
+                >
+                  Mehr über uns
+                </a>
+              </div>
             </div>
           </div>
         </div>
