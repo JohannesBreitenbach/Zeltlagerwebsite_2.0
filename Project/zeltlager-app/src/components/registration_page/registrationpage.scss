@@ -1,6 +1,14 @@
 #registration-page {
-  max-width: 768px;
-  #hint {
-    font-size: small;
+  #header-img {
+    width: 100%;
+    margin: 0;
+    margin-top: -75px;
+  }
+
+  #registration-form {
+    max-width: 768px;
+    #hint {
+      font-size: small;
+    }
   }
 }
