@@ -1,8 +1,8 @@
-import "./about.scss";
+import "./contentsection.scss";
 
-function OrganisationSection() {
+function ContentSection() {
   return (
-    <div id="organisation-section">
+    <div id="content-section">
       <h1>Wer organisiert das Zeltlager?</h1>
       <p>
         Das Zeltlager wird von einer engagierten Gruppe von Freiwilligen und
@@ -21,4 +21,4 @@ function OrganisationSection() {
   );
 }
 
-export default OrganisationSection;
+export default ContentSection;
