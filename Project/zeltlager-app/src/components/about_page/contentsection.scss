@@ -1,3 +1,9 @@
 #content-section {
-  max-width: 768px;
+  #organisation {
+    max-width: 768px;
+
+    p {
+      text-align: justify;
+    }
+  }
 }
