@@ -50,11 +50,14 @@ function RegistrationPage() {
       <div id="header-img">
         <img src="src\assets\img\Header_Enrol.png" className="w-100" />
       </div>
-      <div className="row py-3">
+      <div
+        id="title-container"
+        className="row py-3 d-flex align-items-center justify-content-center"
+      >
         <h2 className="col-12">Anmeldung</h2>
       </div>
       <div className="d-flex align-items-center justify-content-center">
-        <form id="registration-form" className="p-4 ">
+        <form id="registration-form" className="p-4 mb-5">
           <div className="row mb-3">
             <div className="col-12 col-md-6">
               <label htmlFor="firstName">Vorname</label>

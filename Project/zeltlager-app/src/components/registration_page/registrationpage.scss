@@ -5,8 +5,24 @@
     margin-top: -75px;
   }
 
+  #title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+
+    h2 {
+      width: 768px;
+    }
+  }
+
   #registration-form {
     max-width: 768px;
+    width: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+
     #hint {
       font-size: small;
     }
