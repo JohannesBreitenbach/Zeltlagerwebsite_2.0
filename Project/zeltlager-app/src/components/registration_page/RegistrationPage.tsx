@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale, setDefaultLocale } from "react-datepicker";
 import { de } from "date-fns/locale/de";
+import DownloadSection from "../homepage/download_section/DownloadSection";
 registerLocale("de", de);
 
 interface RegistrationData {
@@ -105,7 +106,7 @@ function RegistrationPage() {
                 name="birthday"
                 selected={currentData.birthday}
                 className="form-control"
-                onChange={(date: Date) =>
+                onChange={(date) =>
                   setCurrentData((prevData) => ({
                     ...prevData,
                     birthday: date,
@@ -176,8 +177,8 @@ function RegistrationPage() {
           </div>
 
           <div className="row mb-3">
-            <div className="col-12 d-flex align-items-center justify-content-between">
-              <label htmlFor="canSwim" className="me-3">
+            <div className="col-12 d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
+              <label htmlFor="canSwim" className="me-3 mb-2 mb-md-0">
                 Mein Kind kann schwimmen.
               </label>
               <div>
@@ -222,8 +223,8 @@ function RegistrationPage() {
           </div>
 
           <div className="row mb-3">
-            <div className="col-12 d-flex align-items-center justify-content-between">
-              <label htmlFor="isVegetarian" className="me-3">
+            <div className="col-12 d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
+              <label htmlFor="isVegetarian" className="me-3 mb-2 mb-md-0">
                 Mein Kind isst vegetarisch.
               </label>
               <div>
@@ -268,8 +269,8 @@ function RegistrationPage() {
           </div>
 
           <div className="row mb-3">
-            <div className="col-12 d-flex align-items-center justify-content-between">
-              <label htmlFor="isVacc" className="me-3">
+            <div className="col-12 d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
+              <label htmlFor="isVacc" className="me-3 mb-2 mb-md-0">
                 Mein Kind ist gegen Zecken geimpft.
               </label>
               <div>
@@ -314,8 +315,8 @@ function RegistrationPage() {
           </div>
 
           <div className="row mb-3">
-            <div className="col-12 d-flex align-items-center justify-content-between">
-              <label htmlFor="canBivouac" className="me-3">
+            <div className="col-12 d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
+              <label htmlFor="canBivouac" className="me-3 mb-2 mb-md-0">
                 Mein Kind darf am Biwak (Übernachtung im Freien) teilnehmen.
               </label>
               <div>
@@ -360,53 +361,59 @@ function RegistrationPage() {
           </div>
 
           <div className="row mb-3">
-            <div className="col-12 d-flex align-items-center justify-content-between">
-              <label htmlFor="canPhoto" className="me-3">
+            <div className="col-12 d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
+              <label
+                id="canPhotoLabel"
+                htmlFor="canPhoto"
+                className="me-3 mb-2 mb-md-0"
+              >
                 Ich bin damit einverstanden, dass die Zeltlagerfotos, auf denen
                 mein Kind zu sehen ist, veröffentlicht werden dürfen.*
               </label>
-              <div className="form-check form-check-inline">
-                <input
-                  id="canPhotoYes"
-                  className="form-check-input"
-                  name="canPhoto"
-                  type="radio"
-                  checked={currentData.canPhoto === true}
-                  onChange={() =>
-                    setCurrentData((prevData) => ({
-                      ...prevData,
-                      canPhoto: true,
-                    }))
-                  }
-                />
-                <label htmlFor="canPhotoYes" className="form-check-label">
-                  Ja
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  id="canPhotoNo"
-                  className="form-check-input"
-                  name="canPhoto"
-                  type="radio"
-                  checked={currentData.canPhoto === false}
-                  onChange={() =>
-                    setCurrentData((prevData) => ({
-                      ...prevData,
-                      canPhoto: false,
-                    }))
-                  }
-                />
-                <label htmlFor="canPhotoNo" className="form-check-label">
-                  Nein
-                </label>
+              <div>
+                <div className="form-check form-check-inline">
+                  <input
+                    id="canPhotoYes"
+                    className="form-check-input"
+                    name="canPhoto"
+                    type="radio"
+                    checked={currentData.canPhoto === true}
+                    onChange={() =>
+                      setCurrentData((prevData) => ({
+                        ...prevData,
+                        canPhoto: true,
+                      }))
+                    }
+                  />
+                  <label htmlFor="canPhotoYes" className="form-check-label">
+                    Ja
+                  </label>
+                </div>
+                <div className="form-check form-check-inline">
+                  <input
+                    id="canPhotoNo"
+                    className="form-check-input"
+                    name="canPhoto"
+                    type="radio"
+                    checked={currentData.canPhoto === false}
+                    onChange={() =>
+                      setCurrentData((prevData) => ({
+                        ...prevData,
+                        canPhoto: false,
+                      }))
+                    }
+                  />
+                  <label htmlFor="canPhotoNo" className="form-check-label">
+                    Nein
+                  </label>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="row mb-3">
-            <div className="col-12 d-flex align-items-center justify-content-between">
-              <label htmlFor="canPhoto" className="me-3">
+            <div className="col-12 d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
+              <label htmlFor="tshirt" className="me-3 mb-2 mb-md-0">
                 Ich möchte ein Zeltlager T-Shirt für mein Kind bestellen.
               </label>
               <div>
@@ -424,7 +431,7 @@ function RegistrationPage() {
                       }))
                     }
                   />
-                  <label htmlFor="canPhotoYes" className="form-check-label">
+                  <label htmlFor="tshirtYes" className="form-check-label">
                     Ja
                   </label>
                 </div>
@@ -442,7 +449,7 @@ function RegistrationPage() {
                       }))
                     }
                   />
-                  <label htmlFor="canPhotoNo" className="form-check-label">
+                  <label htmlFor="tshirtNo" className="form-check-label">
                     Nein
                   </label>
                 </div>
@@ -536,6 +543,7 @@ function RegistrationPage() {
           </div>
         </form>
       </div>
+      <DownloadSection />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import Spacer from "../spacer/Spacer";
 import ContentSection from "./ContentSection";
 import "./about.scss";
 
@@ -31,6 +32,7 @@ function AboutPage() {
           </div>
         </div>
       </div>
+      <Spacer />
       <ContentSection
         heading="Wer organisiert das Zeltlager?"
         content="Das Zeltlager wird von einer engagierten Gruppe von Freiwilligen und
