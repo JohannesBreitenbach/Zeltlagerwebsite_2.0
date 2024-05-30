@@ -1,113 +1,5 @@
 import { useState } from "react";
 import "./faqsection.scss";
-import FaqSingle from "./FaqSingle";
-/*
-function FaqSection() {
-  return (
-    <div id="faq-section">
-      <h1>FAQ Section</h1>
-      <div className="accordion w-80" id="basicAccordion">
-        <div className="accordion-item">
-          <h2 className="accordion-header" id="headingOne">
-            <button
-              data-mdb-button-init
-              data-mdb-collapse-init
-              className="accordion-button collapsed"
-              type="button"
-              data-mdb-target="#basicAccordionCollapseOne"
-              aria-expanded="false"
-              aria-controls="collapseOne"
-            >
-              Question #1
-            </button>
-          </h2>
-          <div
-            id="basicAccordionCollapseOne"
-            className="accordion-collapse collapse"
-            aria-labelledby="headingOne"
-            data-mdb-parent="#basicAccordion"
-          >
-            <div className="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div className="accordion-item">
-          <h2 className="accordion-header" id="headingTwo">
-            <button
-              data-mdb-button-init
-              data-mdb-collapse-init
-              className="accordion-button collapsed"
-              type="button"
-              data-mdb-target="#basicAccordionCollapseTwo"
-              aria-expanded="false"
-              aria-controls="collapseTwo"
-            >
-              Question #2
-            </button>
-          </h2>
-          <div
-            id="basicAccordionCollapseTwo"
-            className="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-mdb-parent="#basicAccordion"
-          >
-            <div className="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div className="accordion-item">
-          <h2 className="accordion-header" id="headingThree">
-            <button
-              data-mdb-button-init
-              data-mdb-collapse-init
-              className="accordion-button collapsed"
-              type="button"
-              data-mdb-target="#basicAccordionCollapseThree"
-              aria-expanded="false"
-              aria-controls="collapseThree"
-            >
-              Question #3
-            </button>
-          </h2>
-          <div
-            id="basicAccordionCollapseThree"
-            className="accordion-collapse collapse"
-            aria-labelledby="headingThree"
-            data-mdb-parent="#basicAccordion"
-          >
-            <div className="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-*/
 
 function FaqSection() {
   const [faqs, setFaqs] = useState([
@@ -160,7 +52,7 @@ function FaqSection() {
       <h1 className="p-2 pb-0">FAQ - Häufig gestellte Fragen:</h1>
       <div id="faq-accordion-container" className="faqs accordion w-100">
         {faqs.map((faq, index) => (
-          <div className="accordion-item">
+          <div key={index} className="accordion-item">
             <h2 className="accordion-header">
               <button
                 className="accordion-button collapsed"
