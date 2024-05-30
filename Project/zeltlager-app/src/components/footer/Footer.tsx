@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PAGE_KEYS from "../../constants.tsx";
 import "./footer.scss";
 
@@ -15,7 +16,8 @@ function Footer({ activePage, setActivePage }: FooterProps) {
         </p>
         <ul className="nav col-md-8 justify-content-end">
           <li className="nav-item">
-            <a
+            <Link
+              to={"/"}
               id="nav-home"
               className={`nav-link px-2 text-body-secondary ${
                 activePage === PAGE_KEYS.HOME ? "active" : ""
@@ -24,10 +26,11 @@ function Footer({ activePage, setActivePage }: FooterProps) {
               onClick={() => setActivePage(PAGE_KEYS.HOME)}
             >
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a
+            <Link
+              to={"/" + PAGE_KEYS.ABOUT}
               id="nav-about"
               className={`nav-link px-2 text-body-secondary ${
                 activePage === PAGE_KEYS.ABOUT ? "active" : ""
@@ -35,10 +38,11 @@ function Footer({ activePage, setActivePage }: FooterProps) {
               onClick={() => setActivePage(PAGE_KEYS.ABOUT)}
             >
               Über uns
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a
+            <Link
+              to={"/" + PAGE_KEYS.GALLERY}
               id="nav-gallery"
               className={`nav-link px-2 text-body-secondary ${
                 activePage === PAGE_KEYS.GALLERY ? "active" : ""
@@ -46,20 +50,22 @@ function Footer({ activePage, setActivePage }: FooterProps) {
               onClick={() => setActivePage(PAGE_KEYS.GALLERY)}
             >
               Galerie
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a
+            <Link
+              to={"/" + PAGE_KEYS.APPLICATION}
               className={`nav-link px-2 text-body-secondary ${
                 activePage === PAGE_KEYS.APPLICATION ? "active" : ""
               }`}
               onClick={() => setActivePage(PAGE_KEYS.APPLICATION)}
             >
               Anmeldung
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a
+            <Link
+              to={"/" + PAGE_KEYS.CONTACT}
               id="nav-contact"
               className={`nav-link px-2 text-body-secondary ${
                 activePage === PAGE_KEYS.CONTACT ? "active" : ""
@@ -67,7 +73,7 @@ function Footer({ activePage, setActivePage }: FooterProps) {
               onClick={() => setActivePage(PAGE_KEYS.CONTACT)}
             >
               Kontakt
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <a

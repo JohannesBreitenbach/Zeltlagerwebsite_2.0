@@ -1,6 +1,7 @@
 import "./navbar.scss";
 import PAGE_KEYS from "../../constants.tsx";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 interface NavbarProps {
   activePage: string;
@@ -49,12 +50,13 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
         }`}
       >
         <div className="container-fluid">
-          <a
+          <Link
+            to={"/"}
             className="navbar-brand"
             onClick={() => handleNavItemClick(PAGE_KEYS.HOME)}
           >
             <span>Zeltlager ULF</span>
-          </a>
+          </Link>
           <button
             className={`navbar-toggler ${isCollapsed ? "collapsed" : ""}`}
             type="button"
@@ -72,7 +74,8 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
           >
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a
+                <Link
+                  to={"/"}
                   id="nav-home"
                   className={`nav-link ${
                     activePage === PAGE_KEYS.HOME ? "active" : ""
@@ -82,10 +85,11 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                   onClick={() => handleNavItemClick(PAGE_KEYS.HOME)}
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
+                  to={"/" + PAGE_KEYS.ABOUT}
                   id="nav-about"
                   className={`nav-link ${
                     activePage === PAGE_KEYS.ABOUT ? "active" : ""
@@ -94,10 +98,11 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                   onClick={() => handleNavItemClick(PAGE_KEYS.ABOUT)}
                 >
                   Über uns
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
+                  to={"/" + PAGE_KEYS.GALLERY}
                   id="nav-gallery"
                   className={`nav-link ${
                     activePage === PAGE_KEYS.GALLERY ? "active" : ""
@@ -106,10 +111,11 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                   onClick={() => handleNavItemClick(PAGE_KEYS.GALLERY)}
                 >
                   Galerie
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
+                  to={"/" + PAGE_KEYS.APPLICATION}
                   className={`nav-link ${
                     activePage === PAGE_KEYS.APPLICATION ? "active" : ""
                   }`}
@@ -117,10 +123,11 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                   onClick={() => handleNavItemClick(PAGE_KEYS.APPLICATION)}
                 >
                   Anmeldung
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
+                  to={"/" + PAGE_KEYS.CONTACT}
                   id="nav-contact"
                   className={`nav-link ${
                     activePage === PAGE_KEYS.CONTACT ? "active" : ""
@@ -129,7 +136,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                   onClick={() => handleNavItemClick(PAGE_KEYS.CONTACT)}
                 >
                   Kontakt
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className="navbar-nav d-flex flex-row">

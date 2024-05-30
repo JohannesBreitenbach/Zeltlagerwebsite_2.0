@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import "./enrolsection.scss";
+import PAGE_KEYS from "../../../constants";
 
 function EnrolSection() {
   return (
@@ -8,9 +10,9 @@ function EnrolSection() {
         className="d-flex align-items-center justify-content-between py-5 px-2 px-md-0"
       >
         <h2>Jetzt anmelden!</h2>
-        <a>
+        <Link to={"/" + PAGE_KEYS.APPLICATION}>
           <button className="btn btn-primary">Zur Anmeldung ➔</button>
-        </a>
+        </Link>
       </div>
     </div>
   );

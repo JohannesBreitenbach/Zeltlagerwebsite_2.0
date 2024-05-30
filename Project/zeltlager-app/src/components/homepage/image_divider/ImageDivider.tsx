@@ -38,7 +38,7 @@ function ImageDivider() {
       <div className="w-100">
         <p className="text-end me-2">
           <Link to={"/" + PAGE_KEYS.GALLERY}>
-            <h4>Mehr Bilder ansehen ➔</h4>
+            <button className="btn btn-primary">Mehr Bilder ansehen ➔</button>
           </Link>
         </p>
       </div>
