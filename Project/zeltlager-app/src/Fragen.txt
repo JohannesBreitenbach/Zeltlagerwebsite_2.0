@@ -5,7 +5,7 @@ E-Mail eintragen in Verteiler auch mit API-Call
 
 Wie binde ich die Bilder am besten ein? (100 Bilder in den assets folder?) -> Bei wirklich vielen Amazon S3, aber hier einfach in assets/img
 
-Macht die Schnittstelle mit Google Sheets Sinn? Direkt MongoDB oder so? -> Datenbank!
+Macht die Schnittstelle mit Google Sheets Sinn? Direkt MongoDB oder so? -> Datenbank! 
 
 Ist allgemein ein CMS nötig? -> NEIN!
 
