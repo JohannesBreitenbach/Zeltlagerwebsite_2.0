@@ -10,11 +10,13 @@ import GalleryPage from "./components/gallery_page/GalleryPage";
 import RegistrationPage from "./components/registration_page/RegistrationPage";
 import ContactPage from "./components/contactform/ContactPage";
 import PAGE_KEYS from "./constants";
+import NotFoundPage from "./components/not_found_page/NotFoundPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         path: "/",
