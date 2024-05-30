@@ -1,11 +1,6 @@
-import PAGE_KEYS from "../../../constants";
 import "./maillistsection.scss";
 
-interface MailListSectionParams {
-  setActivePage: (activePage: string) => void;
-}
-
-function MailListSection({ setActivePage }: MailListSectionParams) {
+function MailListSection() {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     const emailInput = (event.target as HTMLFormElement).elements.namedItem(
@@ -67,12 +62,6 @@ function MailListSection({ setActivePage }: MailListSectionParams) {
                 </div>
               </div>
             </div>
-            {/*<a
-              onClick={() => setActivePage(PAGE_KEYS.APPLICATION)}
-              className="align-self-end text-end text-decoration-underline"
-            >
-              Oder direkt zur Anmeldung ➔
-  </a>*/}
           </div>
         </div>
       </div>

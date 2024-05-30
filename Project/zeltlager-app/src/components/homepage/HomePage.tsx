@@ -8,35 +8,30 @@ import InfoSection from "./info_section/InfoSection";
 import MailListSection from "./mail_list_section/MailListSection";
 import NewsSection from "./news_section/NewsSection";
 import QuestionSection from "./question_section/QuestionSection";
-import SponsorSection from "./sponsorsection/SponsorSection";
 
-interface HomePageProps {
-  setActivePage: (activePage: string) => void;
-}
-
-function HomePage({ setActivePage }: HomePageProps) {
+function HomePage() {
   /*
   Allgemein: Bänder, auch komplett IMageband
   */
   return (
     <>
       <HeroImageSection />
-      <InfoSection setActivePage={setActivePage} />
+      <InfoSection />
       <Spacer />
-      <ImageDivider setActivePage={setActivePage} />
+      <ImageDivider />
       <Spacer />
-      <NewsSection setActivePage={setActivePage} />
+      <NewsSection />
       <Spacer />
       <DownloadSection />
       {/*<HeroCarousel />*/}
       <Spacer />
       {/*<SponsorSection />
       <Spacer />*/}
-      <QuestionSection setActivePage={setActivePage} />
+      <QuestionSection />
       <Spacer />
       <EnrolSection />
       <Spacer />
-      <MailListSection setActivePage={setActivePage} />
+      <MailListSection />
     </>
   );
 }

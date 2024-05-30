@@ -1,11 +1,8 @@
 import PAGE_KEYS from "../../../constants";
 import "./infosection.scss";
+import { Link } from "react-router-dom";
 
-interface InfoSectionProps {
-  setActivePage: (activePage: string) => void;
-}
-
-function InfoSection({ setActivePage }: InfoSectionProps) {
+function InfoSection() {
   return (
     <>
       <div
@@ -31,12 +28,9 @@ function InfoSection({ setActivePage }: InfoSectionProps) {
                 die Arbeit mit Kindern und Jugendlichen einsetzen.
               </p>
               <div className="d-flex align-items-center justify-content-end w-100">
-                <a
-                  className="btn btn-primary"
-                  onClick={() => setActivePage(PAGE_KEYS.ABOUT)}
-                >
-                  Mehr über uns ➔
-                </a>
+                <Link to={"/" + PAGE_KEYS.ABOUT}>
+                  <button className="btn btn-primary">Mehr über uns ➔</button>
+                </Link>
               </div>
             </div>
           </div>

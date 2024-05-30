@@ -1,11 +1,8 @@
 import PAGE_KEYS from "../../../constants";
 import "./newssection.scss";
+import { Link } from "react-router-dom";
 
-interface NewsSectionProps {
-  setActivePage: (activePage: string) => void;
-}
-
-function NewsSection({ setActivePage }: NewsSectionProps) {
+function NewsSection() {
   return (
     <>
       <div
@@ -41,14 +38,9 @@ function NewsSection({ setActivePage }: NewsSectionProps) {
                 Anmeldeschluss: 24.06.2024
               </p>
               <div className="d-flex align-items-center justify-content-end w-100">
-                <a
-                  className="btn btn-primary"
-                  onClick={() => {
-                    setActivePage(PAGE_KEYS.APPLICATION);
-                  }}
-                >
-                  Jetzt anmelden ➔
-                </a>
+                <Link to={"/" + PAGE_KEYS.APPLICATION}>
+                  <button className="btn btn-primary">Jetzt anmelden ➔</button>
+                </Link>
               </div>
             </div>
           </div>

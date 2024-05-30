@@ -1,10 +1,8 @@
 import PAGE_KEYS from "../../../constants";
 import "./questionsection.scss";
+import { Link } from "react-router-dom";
 
-interface QuestionSectionProps {
-  setActivePage: (activePage: string) => void;
-}
-function QuestionSection({ setActivePage }: QuestionSectionProps) {
+function QuestionSection() {
   return (
     <div
       id="question-section"
@@ -24,14 +22,9 @@ function QuestionSection({ setActivePage }: QuestionSectionProps) {
               schreiben Sie uns eine E-Mail.
             </p>
             <div className="d-flex align-items-center justify-content-end w-100">
-              <a
-                className="btn btn-primary"
-                onClick={() => {
-                  setActivePage(PAGE_KEYS.CONTACT);
-                }}
-              >
-                Zu den FAQs ➔
-              </a>
+              <Link to={"/" + PAGE_KEYS.CONTACT}>
+                <button className="btn btn-primary">Zu den FAQs ➔</button>
+              </Link>
             </div>
           </div>
           <div

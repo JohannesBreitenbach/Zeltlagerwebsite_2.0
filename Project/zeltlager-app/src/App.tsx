@@ -1,7 +1,7 @@
 import "./App.scss";
 
 import Navbar from "./components/navbar/Navbar";
-import ContactForm from "./components/contactform/ContactForm";
+import ContactForm from "./components/contactform/ContactPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
@@ -13,19 +13,39 @@ import HomePage from "./components/homepage/HomePage";
 import AboutPage from "./components/about_page/AboutPage";
 import RegistrationPage from "./components/registration_page/RegistrationPage";
 
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ContactPage from "./components/contactform/ContactPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/" + PAGE_KEYS.ABOUT,
+    element: <AboutPage />,
+  },
+  {
+    path: "/" + PAGE_KEYS.GALLERY,
+    element: <GalleryPage />,
+  },
+  {
+    path: "/" + PAGE_KEYS.APPLICATION,
+    element: <RegistrationPage />,
+  },
+  {
+    path: "/" + PAGE_KEYS.CONTACT,
+    element: <ContactPage />,
+  },
+]);
+
 function App() {
   const [activePage, setActivePage] = useState(PAGE_KEYS.HOME);
 
   return (
     <div id="app">
       <Navbar activePage={activePage} setActivePage={setActivePage} />
-      {activePage === PAGE_KEYS.HOME && (
-        <HomePage setActivePage={setActivePage} />
-      )}
-      {activePage === PAGE_KEYS.CONTACT && <ContactForm />}
-      {activePage === PAGE_KEYS.GALLERY && <GalleryPage />}
-      {activePage === PAGE_KEYS.ABOUT && <AboutPage />}
-      {activePage === PAGE_KEYS.APPLICATION && <RegistrationPage />}
+
       <Footer activePage={activePage} setActivePage={setActivePage} />
     </div>
   );

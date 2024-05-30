@@ -1,9 +1,9 @@
 const PAGE_KEYS = {
   HOME: "home",
-  ABOUT: "about",
-  GALLERY: "gallery",
-  APPLICATION: "application",
-  CONTACT: "contact",
+  ABOUT: "über uns",
+  GALLERY: "galerie",
+  APPLICATION: "anmeldung",
+  CONTACT: "kontakt",
 };
 
 Object.freeze(PAGE_KEYS);

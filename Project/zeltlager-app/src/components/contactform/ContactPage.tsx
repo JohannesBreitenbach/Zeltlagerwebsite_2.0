@@ -1,9 +1,9 @@
 import React from "react";
-import "./contactform.scss";
+import "./contactpage.scss";
 import FormCard from "./FormCard";
 import FaqSection from "../faq_section/FaqSection";
 
-function ContactForm() {
+export default function ContactPage() {
   return (
     <>
       <FaqSection />
@@ -25,5 +25,3 @@ function ContactForm() {
     </>
   );
 }
-
-export default ContactForm;
