@@ -24,6 +24,4 @@ Mulish (3 versch. types: Heading, paragraph, button)
 Barlow
 Roboto
 
-IMplement react router?
-
 Präsentation: (wichtige Punkte im Lab10) 8-10min Länge, 
