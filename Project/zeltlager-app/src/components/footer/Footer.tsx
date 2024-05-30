@@ -3,11 +3,10 @@ import PAGE_KEYS from "../../constants.tsx";
 import "./footer.scss";
 
 interface FooterProps {
-  activePage: String;
-  setActivePage: (activePage: string) => void;
+  currentPath: String;
 }
 
-function Footer({ activePage, setActivePage }: FooterProps) {
+function Footer({ currentPath }: FooterProps) {
   return (
     <div id="footer-custom">
       <footer className="d-flex justify-content-between align-items-center footer navbar-fixed-bottom px-3 py-3 border-top">
@@ -20,10 +19,9 @@ function Footer({ activePage, setActivePage }: FooterProps) {
               to={"/"}
               id="nav-home"
               className={`nav-link px-2 text-body-secondary ${
-                activePage === PAGE_KEYS.HOME ? "active" : ""
+                currentPath === "/" ? "active" : ""
               }`}
               aria-current="page"
-              onClick={() => setActivePage(PAGE_KEYS.HOME)}
             >
               Home
             </Link>
@@ -33,9 +31,8 @@ function Footer({ activePage, setActivePage }: FooterProps) {
               to={"/" + PAGE_KEYS.ABOUT}
               id="nav-about"
               className={`nav-link px-2 text-body-secondary ${
-                activePage === PAGE_KEYS.ABOUT ? "active" : ""
+                currentPath === "/" + PAGE_KEYS.ABOUT ? "active" : ""
               }`}
-              onClick={() => setActivePage(PAGE_KEYS.ABOUT)}
             >
               Über uns
             </Link>
@@ -45,9 +42,8 @@ function Footer({ activePage, setActivePage }: FooterProps) {
               to={"/" + PAGE_KEYS.GALLERY}
               id="nav-gallery"
               className={`nav-link px-2 text-body-secondary ${
-                activePage === PAGE_KEYS.GALLERY ? "active" : ""
+                currentPath === "/" + PAGE_KEYS.GALLERY ? "active" : ""
               }`}
-              onClick={() => setActivePage(PAGE_KEYS.GALLERY)}
             >
               Galerie
             </Link>
@@ -56,9 +52,8 @@ function Footer({ activePage, setActivePage }: FooterProps) {
             <Link
               to={"/" + PAGE_KEYS.APPLICATION}
               className={`nav-link px-2 text-body-secondary ${
-                activePage === PAGE_KEYS.APPLICATION ? "active" : ""
+                currentPath === "/" + PAGE_KEYS.APPLICATION ? "active" : ""
               }`}
-              onClick={() => setActivePage(PAGE_KEYS.APPLICATION)}
             >
               Anmeldung
             </Link>
@@ -68,9 +63,8 @@ function Footer({ activePage, setActivePage }: FooterProps) {
               to={"/" + PAGE_KEYS.CONTACT}
               id="nav-contact"
               className={`nav-link px-2 text-body-secondary ${
-                activePage === PAGE_KEYS.CONTACT ? "active" : ""
+                currentPath === "/" + PAGE_KEYS.CONTACT ? "active" : ""
               }`}
-              onClick={() => setActivePage(PAGE_KEYS.CONTACT)}
             >
               Kontakt
             </Link>

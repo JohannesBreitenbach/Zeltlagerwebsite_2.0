@@ -1,4 +1,3 @@
-import React from "react";
 import "./contactpage.scss";
 import FormCard from "./FormCard";
 import FaqSection from "../faq_section/FaqSection";

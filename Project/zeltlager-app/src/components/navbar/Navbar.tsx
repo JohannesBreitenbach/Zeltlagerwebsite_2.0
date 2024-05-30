@@ -1,14 +1,13 @@
 import "./navbar.scss";
 import PAGE_KEYS from "../../constants.tsx";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 interface NavbarProps {
-  activePage: string;
-  setActivePage: (activePage: string) => void;
+  currentPath: string;
 }
 
-function Navbar({ activePage, setActivePage }: NavbarProps) {
+function Navbar({ currentPath }: NavbarProps) {
   // State to track if the background should be solid or transparent
   const [bgSolid, setBgSolid] = useState(false);
 
@@ -36,12 +35,6 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
     setIsCollapsed(!isCollapsed);
   };
 
-  // Handle click event for navbar items
-  const handleNavItemClick = (pageKey: string) => {
-    setActivePage(pageKey);
-    setIsCollapsed(true);
-  };
-
   return (
     <div id="navbarComponent">
       <nav
@@ -53,7 +46,9 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
           <Link
             to={"/"}
             className="navbar-brand"
-            onClick={() => handleNavItemClick(PAGE_KEYS.HOME)}
+            onClick={() => {
+              setIsCollapsed(true);
+            }}
           >
             <span>Zeltlager ULF</span>
           </Link>
@@ -77,12 +72,10 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                 <Link
                   to={"/"}
                   id="nav-home"
-                  className={`nav-link ${
-                    activePage === PAGE_KEYS.HOME ? "active" : ""
-                  }`}
+                  className={`nav-link ${currentPath === "/" ? "active" : ""}`}
                   aria-current="page"
                   role="button"
-                  onClick={() => handleNavItemClick(PAGE_KEYS.HOME)}
+                  onClick={() => setIsCollapsed(true)}
                 >
                   Home
                 </Link>
@@ -92,10 +85,10 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                   to={"/" + PAGE_KEYS.ABOUT}
                   id="nav-about"
                   className={`nav-link ${
-                    activePage === PAGE_KEYS.ABOUT ? "active" : ""
+                    currentPath === "/" + PAGE_KEYS.ABOUT ? "active" : ""
                   }`}
                   role="button"
-                  onClick={() => handleNavItemClick(PAGE_KEYS.ABOUT)}
+                  onClick={() => setIsCollapsed(true)}
                 >
                   Über uns
                 </Link>
@@ -105,10 +98,10 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                   to={"/" + PAGE_KEYS.GALLERY}
                   id="nav-gallery"
                   className={`nav-link ${
-                    activePage === PAGE_KEYS.GALLERY ? "active" : ""
+                    currentPath === "/" + PAGE_KEYS.GALLERY ? "active" : ""
                   }`}
                   role="button"
-                  onClick={() => handleNavItemClick(PAGE_KEYS.GALLERY)}
+                  onClick={() => setIsCollapsed(true)}
                 >
                   Galerie
                 </Link>
@@ -117,10 +110,10 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                 <Link
                   to={"/" + PAGE_KEYS.APPLICATION}
                   className={`nav-link ${
-                    activePage === PAGE_KEYS.APPLICATION ? "active" : ""
+                    currentPath === "/" + PAGE_KEYS.APPLICATION ? "active" : ""
                   }`}
                   role="button"
-                  onClick={() => handleNavItemClick(PAGE_KEYS.APPLICATION)}
+                  onClick={() => setIsCollapsed(true)}
                 >
                   Anmeldung
                 </Link>
@@ -130,10 +123,10 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                   to={"/" + PAGE_KEYS.CONTACT}
                   id="nav-contact"
                   className={`nav-link ${
-                    activePage === PAGE_KEYS.CONTACT ? "active" : ""
+                    currentPath === "/" + PAGE_KEYS.CONTACT ? "active" : ""
                   }`}
                   role="button"
-                  onClick={() => handleNavItemClick(PAGE_KEYS.CONTACT)}
+                  onClick={() => setIsCollapsed(true)}
                 >
                   Kontakt
                 </Link>

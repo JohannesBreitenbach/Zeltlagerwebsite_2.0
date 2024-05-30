@@ -1,6 +1,6 @@
 const PAGE_KEYS = {
   HOME: "home",
-  ABOUT: "über uns",
+  ABOUT: "about_us",
   GALLERY: "galerie",
   APPLICATION: "anmeldung",
   CONTACT: "kontakt",
