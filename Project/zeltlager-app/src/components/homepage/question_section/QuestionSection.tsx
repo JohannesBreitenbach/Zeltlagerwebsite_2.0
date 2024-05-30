@@ -30,7 +30,7 @@ function QuestionSection({ setActivePage }: QuestionSectionProps) {
                   setActivePage(PAGE_KEYS.CONTACT);
                 }}
               >
-                Zu den FAQs
+                Zu den FAQs ➔
               </a>
             </div>
           </div>

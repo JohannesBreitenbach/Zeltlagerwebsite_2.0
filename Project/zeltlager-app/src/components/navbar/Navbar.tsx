@@ -23,7 +23,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
     }
   };
 
-  // Add scroll event listener to handle navbar background change
+  // scroll event listener
   useEffect(() => {
     window.addEventListener("scroll", changeColor);
     return () => {
@@ -134,7 +134,11 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
             </ul>
             <ul className="navbar-nav d-flex flex-row">
               <li className="nav-item me-3 me-lg-0">
-                <a className="nav-link" href="#!">
+                <a
+                  className="nav-link"
+                  href="https://www.instagram.com/ulferzeltlager/"
+                  target="_blank"
+                >
                   <i className="fab fa-instagram"></i>
                 </a>
               </li>

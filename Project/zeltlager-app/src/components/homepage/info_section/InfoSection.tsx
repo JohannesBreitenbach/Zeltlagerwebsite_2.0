@@ -35,7 +35,7 @@ function InfoSection({ setActivePage }: InfoSectionProps) {
                   className="btn btn-primary"
                   onClick={() => setActivePage(PAGE_KEYS.ABOUT)}
                 >
-                  Mehr über uns
+                  Mehr über uns ➔
                 </a>
               </div>
             </div>

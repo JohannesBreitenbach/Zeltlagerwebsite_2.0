@@ -47,7 +47,7 @@ function NewsSection({ setActivePage }: NewsSectionProps) {
                     setActivePage(PAGE_KEYS.APPLICATION);
                   }}
                 >
-                  Jetzt anmelden
+                  Jetzt anmelden ➔
                 </a>
               </div>
             </div>

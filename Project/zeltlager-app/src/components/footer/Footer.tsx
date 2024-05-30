@@ -70,7 +70,11 @@ function Footer({ activePage, setActivePage }: FooterProps) {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#!">
+            <a
+              className="nav-link"
+              href="https://www.instagram.com/ulferzeltlager/"
+              target="_blank"
+            >
               <i className="fab fa-instagram" style={{ color: "black" }}></i>
             </a>
           </li>
