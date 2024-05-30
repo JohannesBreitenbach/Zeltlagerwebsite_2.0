@@ -2,13 +2,6 @@ import CustomCountdown from "./CustomCountdown";
 import "./herosection.scss";
 
 function HeroImageSection() {
-  /*
-  Countdown Design: 
-  -Einheiten unter die große Zahl
-  -Tage, Minuten, Stunden, Sekunden (zählen runter)
-
-   */
-
   return (
     <>
       <header id="heroImageComponent">
